@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GÔM — Ẩm thực miền Trung · 25 Lê Hồng Phong, Đà Nẵng</title>
+  <meta name="description" content="Gôm về bên nhau. Quây tròn bữa ăn vui. Ẩm thực miền Trung tại 25 Lê Hồng Phong, Hải Châu, Đà Nẵng." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fixed back link on desktop (bottom-left gutter, never overlaps content) -->
+  <a href="../index.html" class="back-styles-floating" aria-label="Quay lại danh sách các phong cách">
+    ← Các phong cách
+  </a>
+
+  <div class="desktop-stage">
+    <!-- LEFT BRAND SIDE PANEL (Desktop only) -->
+    <aside class="side-panel side-panel--left" aria-label="Giới thiệu thương hiệu GÔM">
+      <div class="side-brand-card">
+        <div class="side-brand-hero">
+          <img src="../assets/wordmark-header.webp" alt="GÔM" class="side-wordmark" width="140" height="48" />
+          <p class="side-tagline">Gôm về bên nhau.<br />Quây tròn bữa ăn vui.</p>
+        </div>
+
+        <div class="side-pillars" aria-label="Tinh thần GÔM">
+          <span class="pillar-pill"><strong>ĐẬM</strong> hương vị</span>
+          <span class="pillar-pill"><strong>TƯƠI</strong> nguyên liệu</span>
+          <span class="pillar-pill"><strong>VUI</strong> trải nghiệm</span>
+        </div>
+
+        <p class="side-story">
+          Người miền Trung gọi nhau bằng tiếng <strong>“gôm”</strong> mộc mạc — có khách thì thêm đôi đũa, có món ngon thì gắp cho nhau miếng đầu tiên.
+        </p>
+
+        <div class="side-info-list">
+          <div class="side-info-item">
+            <span class="side-info-label">Địa chỉ</span>
+            <span class="side-info-value">25 Lê Hồng Phong, Hải Châu, Đà Nẵng</span>
+          </div>
+          <div class="side-info-item">
+            <span class="side-info-label">Giờ mở cửa</span>
+            <span class="side-info-value">08:00 – 22:00 hằng ngày</span>
+          </div>
+          <div class="side-info-item">
+            <span class="side-info-label">Thực đơn</span>
+            <span class="side-info-value">44 món miền Trung · 7 nhóm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-nav-card">
+        <p class="side-card-heading">Chuyển nhanh màn hình</p>
+        <div class="side-quick-links">
+          <button type="button" class="side-link-btn" data-nav="home">Trang chủ</button>
+          <button type="button" class="side-link-btn" data-nav="menu">Thực đơn 44 món</button>
+          <button type="button" class="side-link-btn" data-nav="boc-mam">Bốc mâm ngẫu nhiên</button>
+          <button type="button" class="side-link-btn" data-nav="dat-ban">Đặt bàn ngay</button>
+          <button type="button" class="side-link-btn" data-nav="ghe-gom">Ghé GÔM</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER APP COLUMN (480px max on desktop, 100% on mobile) -->
+    <div class="app-shell">
+      <!-- Slim utility bar for mobile so "← Các phong cách" never covers content -->
+      <div class="mobile-top-utility">
+        <a href="../index.html" class="back-styles-inline">← Các phong cách</a>
+        <span class="utility-address">25 Lê Hồng Phong · Đà Nẵng</span>
+      </div>
+
+      <!-- COMPACT TOP APP BAR -->
+      <header class="app-bar">
+        <button type="button" class="app-bar__brand" data-nav="home" aria-label="Về trang chủ GÔM">
+          <img src="../assets/gom-mark-small.webp" alt="" class="app-bar__logo" width="34" height="34" />
+          <span class="app-bar__title">GÔM</span>
+        </button>
+
+        <div class="app-bar__right">
+          <div class="status-pill" id="openStatusPill" aria-live="polite">
+            <span class="status-pill__dot" aria-hidden="true"></span>
+            <span class="status-pill__text" id="openStatusText">Đang mở</span>
+          </div>
+
+          <button type="button" class="lang-chip" id="langChip" aria-label="Đổi sắc thái tiếng Việt" title="Đổi giọng nói GÔM">
+            VI
+          </button>
+
+          <button type="button" class="tray-btn" id="openTrayBtn" aria-label="Mở mâm món đã chọn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 14h18" />
+              <path d="M5 14a7 7 0 0 1 14 0" />
+              <path d="M12 7V5" />
+              <path d="M5 17h14" />
+            </svg>
+            <span class="tray-btn__badge" id="trayCountBadge">0</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- MAIN SCREENS VIEWPORT -->
+      <main class="screens-viewport" id="screensViewport">
+        <!-- ==================== SCREEN 1: HOME ==================== -->
+        <section class="screen is-active" id="screen-home" data-screen="home" aria-label="Trang chủ">
+          <div class="screen-pad">
+            <!-- Greeting -->
+            <div class="greeting-block">
+              <p class="greeting-eyebrow" id="greetingEyebrow">GÔM ĐÀ NẴNG · ẨM THỰC MIỀN TRUNG</p>
+              <h1 class="greeting-title" id="greetingTitle">Chào bạn, nay ăn chi hè?</h1>
+              <p class="greeting-sub">Gôm về bên nhau. Quây tròn bữa ăn vui.</p>
+            </div>
+
+            <!-- Quick action chips -->
+            <div class="quick-chips" role="navigation" aria-label="Lối tắt nhanh">
+              <button type="button" class="quick-chip quick-chip--primary" data-nav="dat-ban">
+                <span class="quick-chip__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                </span>
+                Đặt bàn
+              </button>
+              <button type="button" class="quick-chip" data-nav="boc-mam">
+                <span class="quick-chip__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                Bốc mâm
+              </button>
+              <button type="button" class="quick-chip" data-nav="menu">
+                <span class="quick-chip__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                </span>
+                44 món ngon
+              </button>
+              <button type="button" class="quick-chip" data-nav="ghe-gom">
+                <span class="quick-chip__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>
+                </span>
+                Ghé GÔM
+              </button>
+            </div>
+
+            <!-- Hero gathering card -->
+            <article class="hero-banner">
+              <img src="../assets/photos/gathering.webp" alt="Mâm cơm quây quần tại GÔM" class="hero-banner__img" />
+              <div class="hero-banner__scrim"></div>
+              <div class="hero-banner__content">
+                <span class="hero-badge">ĐẬM · TƯƠI · VUI</span>
+                <h2 class="hero-banner__title">Món ngon đặt giữa bàn, câu chuyện nối câu chuyện</h2>
+                <p class="hero-banner__meta">25 Lê Hồng Phong, Hải Châu · 08:00 – 22:00</p>
+              </div>
+            </article>
+
+            <!-- Horizontal carousel: Signature dishes -->
+            <div class="section-head">
+              <div>
+                <h2 class="section-title">Món thương nhớ nhà GÔM</h2>
+                <p class="section-sub">Chạm để xem chi tiết hoặc thêm vào mâm</p>
+              </div>
+              <button type="button" class="text-link" data-nav="menu">Xem hết</button>
+            </div>
+            <div class="h-carousel" id="signatureCarousel" aria-label="Món tiêu biểu"></div>
+
+            <!-- Promo card: Bốc mâm -->
+            <article class="promo-card">
+              <div class="promo-card__body">
+                <span class="promo-tag">Trò vui trước bữa ăn</span>
+                <h2 class="promo-card__title">Hôm nay đi mấy người, ăn mâm chi hè?</h2>
+                <p class="promo-card__desc">Chọn từ 1 đến 20 người, GÔM quay bàn gợi ý ngay một mâm tròn vị từ khai vị tới tráng miệng.</p>
+                <button type="button" class="btn btn--gold" data-nav="boc-mam">Bốc mâm ngay</button>
+              </div>
+              <img src="../assets/rooster-card.webp" alt="Minh họa gà Đông Hồ" class="promo-card__art" width="96" height="96" />
+            </article>
+
+            <!-- Story card: Chuyện chữ GÔM -->
+            <article class="story-card">
+              <div class="story-card__media">
+                <img src="../assets/photos/garden.webp" alt="Lối đi xanh mát tại GÔM" class="story-card__img" />
+                <div class="story-card__scrim"></div>
+                <span class="story-card__eyebrow">Chuyện GÔM</span>
+              </div>
+              <div class="story-card__body">
+                <h2 class="story-card__title">Một tiếng gọi thân thương</h2>
+                <p class="story-card__text">
+                  Người miền Trung gọi nhau bằng tiếng “gôm” mộc mạc — có khách thì thêm đôi đũa, có món ngon thì gắp cho nhau miếng đầu tiên. Bữa cơm ngon nhất là bữa cơm có đủ người thương ngồi quây tròn.
+                </p>
+              </div>
+            </article>
+
+            <!-- Mini interactive Dino card -->
+            <article class="dino-card">
+              <img src="../assets/dino-card.webp" alt="Dino GÔM nói giọng Quảng" class="dino-card__art" width="76" height="76" />
+              <div class="dino-card__content">
+                <span class="dino-card__label">Chơi cùng GÔM · Giọng Quảng Nam</span>
+                <p class="dino-card__word" id="dinoWord">“Ăn chi hè?”</p>
+                <p class="dino-card__meaning" id="dinoMeaning">Nghĩa là: Hôm nay mình ăn gì nhỉ? — câu mở đầu quen thuộc mỗi lần gôm bạn.</p>
+                <button type="button" class="btn btn--soft btn--sm" id="nextDinoBtn">Nghe câu khác</button>
+              </div>
+            </article>
+
+            <!-- Horizontal carousel: Drinks & Atmosphere -->
+            <div class="section-head">
+              <div>
+                <h2 class="section-title">Không gian &amp; Thức uống</h2>
+                <p class="section-sub">Góc xanh mát giữa lòng Hải Châu</p>
+              </div>
+            </div>
+            <div class="h-carousel h-carousel--photos" aria-label="Ảnh không gian GÔM">
+              <figure class="photo-card">
+                <img src="../assets/photos/drinks.webp" alt="Thức uống thảo mộc tại GÔM" loading="lazy" />
+                <figcaption>Trà sâm dứa &amp; thức uống mát lành</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img src="../assets/photos/coffee-together.webp" alt="Cà phê trò chuyện cùng nhau" loading="lazy" />
+                <figcaption>Cà phê sớm, gôm chuyện vui</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img src="../assets/photos/01-89190164.webp" alt="Không gian ấm cúng nhà GÔM" loading="lazy" />
+                <figcaption>Góc bàn ấm cúng cho gia đình</figcaption>
+              </figure>
+              <figure class="photo-card">
+                <img src="../assets/photos/05-32dbd512.webp" alt="Bàn ăn quây quần" loading="lazy" />
+                <figcaption>Đủ chỗ cho nhóm bạn đông vui</figcaption>
+              </figure>
+            </div>
+
+            <footer class="app-footer">
+              <p class="app-footer__brand">GÔM · Ẩm thực miền Trung</p>
+              <p class="app-footer__line">25 Lê Hồng Phong, Hải Châu, Đà Nẵng · 08:00 – 22:00</p>
+              <p class="app-footer__line">Gôm đủ người, mình gặp nhau hè!</p>
+            </footer>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 2: MENU ==================== -->
+        <section class="screen" id="screen-menu" data-screen="menu" aria-label="Thực đơn 44 món">
+          <div class="menu-sticky-bar">
+            <div class="search-field">
+              <svg class="search-field__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="M20 20l-3.5-3.5" />
+              </svg>
+              <input type="search" id="menuSearchInput" class="search-field__input" placeholder="Tìm món (vd: mì quảng, bánh xèo, lẩu...)" autocomplete="off" />
+              <button type="button" id="clearSearchBtn" class="search-field__clear" aria-label="Xóa từ khóa" hidden>&times;</button>
+            </div>
+
+            <div class="cat-chips" id="categoryChips" role="tablist" aria-label="Nhóm món ăn"></div>
+          </div>
+
+          <div class="screen-pad screen-pad--menu">
+            <div class="menu-meta-row">
+              <h1 class="screen-title">Thực đơn nhà GÔM</h1>
+              <span class="menu-count-pill" id="menuCountLabel">44 món</span>
+            </div>
+
+            <div class="dish-list" id="menuDishList"></div>
+
+            <div class="empty-state" id="menuEmptyState" hidden>
+              <img src="../assets/chili-card.webp" alt="" width="64" height="64" />
+              <p class="empty-state__title">Chưa thấy món bạn tìm hè!</p>
+              <p class="empty-state__desc">Thử từ khóa khác hoặc xem lại toàn bộ 44 món của GÔM nhé.</p>
+              <button type="button" class="btn btn--soft" id="resetMenuFilterBtn">Xem tất cả 44 món</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 3: BỐC MÂM ==================== -->
+        <section class="screen" id="screen-boc-mam" data-screen="boc-mam" aria-label="Bốc mâm ngẫu nhiên">
+          <div class="screen-pad">
+            <div class="boc-hero">
+              <div class="boc-hero__top">
+                <div>
+                  <span class="boc-eyebrow">Gợi ý mâm cơm miền Trung</span>
+                  <h1 class="screen-title">Hôm nay đi mấy người, ăn mâm chi hè?</h1>
+                </div>
+                <img src="../assets/rooster-card.webp" alt="" class="boc-hero__art" width="68" height="68" />
+              </div>
+
+              <div class="stepper-card">
+                <div class="stepper-card__label">
+                  <span class="stepper-label-main">Số người trong mâm</span>
+                  <span class="stepper-label-sub" id="bocHintText">Mâm 4 người · khoảng 6 món tròn vị</span>
+                </div>
+                <div class="stepper" role="group" aria-label="Chọn số người từ 1 đến 20">
+                  <button type="button" class="stepper__btn" id="bocMinusBtn" aria-label="Giảm số người">−</button>
+                  <output class="stepper__val" id="bocGuestCount">4</output>
+                  <button type="button" class="stepper__btn" id="bocPlusBtn" aria-label="Tăng số người">+</button>
+                </div>
+              </div>
+
+              <div class="preset-row" aria-label="Chọn nhanh số người">
+                <button type="button" class="preset-chip" data-boc-preset="2">2 người</button>
+                <button type="button" class="preset-chip is-selected" data-boc-preset="4">4 người</button>
+                <button type="button" class="preset-chip" data-boc-preset="6">6 người</button>
+                <button type="button" class="preset-chip" data-boc-preset="10">10 người</button>
+                <button type="button" class="preset-chip" data-boc-preset="16">16 người</button>
+              </div>
+
+              <button type="button" class="btn btn--primary btn--full" id="rollMamBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 12a9 9 0 1 1-2.64-6.36" />
+                  <path d="M21 3v6h-6" />
+                </svg>
+                Bốc mâm ngẫu nhiên
+              </button>
+            </div>
+
+            <!-- Result section -->
+            <div class="boc-result" id="bocResultSection">
+              <div class="boc-result__head">
+                <div>
+                  <h2 class="section-title" id="bocResultTitle">Mâm gợi ý cho 4 người</h2>
+                  <p class="section-sub" id="bocResultSub">Đủ món chính, rau gỏi, canh và tráng miệng</p>
+                </div>
+              </div>
+
+              <div class="boc-list" id="bocDishList"></div>
+
+              <div class="boc-actions">
+                <button type="button" class="btn btn--soft" id="rerollMamBtn">Bốc lại mâm khác</button>
+                <button type="button" class="btn btn--primary" id="addWholeMamBtn">Thêm cả mâm</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 4: ĐẶT BÀN ==================== -->
+        <section class="screen" id="screen-dat-ban" data-screen="dat-ban" aria-label="Đặt bàn tại GÔM">
+          <div class="screen-pad screen-pad--booking">
+            <div class="booking-head">
+              <span class="boc-eyebrow">25 Lê Hồng Phong · Hải Châu</span>
+              <h1 class="screen-title">Gôm đủ người, mình gặp nhau hè!</h1>
+              <p class="section-sub">Đặt trước để GÔM chuẩn bị bàn ấm cúng và đủ bát đũa chờ bạn.</p>
+            </div>
+
+            <form id="bookingForm" class="booking-form" novalidate>
+              <!-- Date chips -->
+              <div class="form-group">
+                <label class="form-label">Chọn ngày</label>
+                <div class="chip-grid chip-grid--3" id="dateChips" role="radiogroup" aria-label="Chọn ngày đặt bàn">
+                  <button type="button" class="select-chip is-selected" data-date-offset="0" aria-checked="true" role="radio">
+                    <span class="select-chip__main">Hôm nay</span>
+                    <span class="select-chip__sub" id="dateLabel0"></span>
+                  </button>
+                  <button type="button" class="select-chip" data-date-offset="1" aria-checked="false" role="radio">
+                    <span class="select-chip__main">Ngày mai</span>
+                    <span class="select-chip__sub" id="dateLabel1"></span>
+                  </button>
+                  <button type="button" class="select-chip" data-date-offset="2" aria-checked="false" role="radio">
+                    <span class="select-chip__main">Ngày kia</span>
+                    <span class="select-chip__sub" id="dateLabel2"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Time slots 08:00 - 21:30 -->
+              <div class="form-group">
+                <div class="form-label-row">
+                  <label class="form-label">Khung giờ (08:00 – 21:30)</label>
+                  <span class="form-label-note" id="selectedTimeLabel">18:30</span>
+                </div>
+                <div class="time-slots" id="timeSlotGrid" role="radiogroup" aria-label="Chọn khung giờ"></div>
+              </div>
+
+              <!-- Guests stepper -->
+              <div class="form-group">
+                <div class="stepper-card stepper-card--compact">
+                  <div class="stepper-card__label">
+                    <span class="stepper-label-main">Số khách</span>
+                    <span class="stepper-label-sub">Nhận bàn từ 1 đến 20 khách</span>
+                  </div>
+                  <div class="stepper" role="group" aria-label="Chọn số khách đặt bàn">
+                    <button type="button" class="stepper__btn" id="bookMinusBtn" aria-label="Giảm số khách">−</button>
+                    <output class="stepper__val" id="bookGuestCount">4</output>
+                    <button type="button" class="stepper__btn" id="bookPlusBtn" aria-label="Tăng số khách">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Guest Name -->
+              <div class="form-group">
+                <label class="form-label" for="guestNameInput">Tên người đặt</label>
+                <input type="text" id="guestNameInput" name="guestName" class="text-input" placeholder="Ví dụ: Nguyễn Minh Anh" autocomplete="name" required />
+                <p class="field-error" id="guestNameError" role="alert" hidden></p>
+              </div>
+
+              <!-- Phone VN -->
+              <div class="form-group">
+                <label class="form-label" for="guestPhoneInput">Số điện thoại (Việt Nam)</label>
+                <input type="tel" id="guestPhoneInput" name="guestPhone" class="text-input" placeholder="Ví dụ: 0905 123 456" autocomplete="tel" inputmode="tel" required />
+                <p class="field-error" id="guestPhoneError" role="alert" hidden></p>
+              </div>
+
+              <!-- Optional note chips -->
+              <div class="form-group">
+                <label class="form-label" for="guestNoteInput">Lời nhắn cho GÔM (không bắt buộc)</label>
+                <div class="note-chips" id="noteChips">
+                  <button type="button" class="note-chip" data-note="Ngồi gần góc vườn xanh">Gần vườn xanh</button>
+                  <button type="button" class="note-chip" data-note="Có ghế cho bé nhỏ">Có trẻ nhỏ</button>
+                  <button type="button" class="note-chip" data-note="Bàn tròn cho gia đình">Bàn tròn gia đình</button>
+                </div>
+                <input type="text" id="guestNoteInput" name="guestNote" class="text-input" placeholder="Ghi chú thêm nếu cần..." />
+              </div>
+
+              <!-- Attached tray summary -->
+              <div class="booking-tray-card" id="bookingTraySummary" hidden>
+                <div class="booking-tray-card__text">
+                  <strong>Mâm đã chọn: <span id="bookingTrayCount">0</span> món</strong>
+                  <span>GÔM sẽ ghi nhận sẵn để lên món nhanh hơn</span>
+                </div>
+                <button type="button" class="text-link" id="bookingOpenTrayBtn">Xem mâm</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Sticky Bottom CTA above floating dock -->
+          <div class="booking-sticky-cta">
+            <div class="booking-sticky-cta__info">
+              <span class="booking-sticky-cta__main" id="stickyBookingSummary">Hôm nay · 18:30 · 4 khách</span>
+              <span class="booking-sticky-cta__sub">Xác nhận ngay mã đặt bàn</span>
+            </div>
+            <button type="submit" form="bookingForm" class="btn btn--primary" id="submitBookingBtn">
+              Đặt bàn ngay
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== SCREEN 5: GHÉ GÔM ==================== -->
+        <section class="screen" id="screen-ghe-gom" data-screen="ghe-gom" aria-label="Ghé GÔM">
+          <div class="screen-pad">
+            <div class="booking-head">
+              <span class="boc-eyebrow">Đường tới nhà GÔM</span>
+              <h1 class="screen-title">Ghé GÔM tại Đà Nẵng</h1>
+              <p class="section-sub">Nằm ngay trung tâm quận Hải Châu, dễ tìm và thoáng đãng.</p>
+            </div>
+
+            <!-- Map SVG card -->
+            <div class="map-card">
+              <img src="../assets/gom-map-danang.svg" alt="Bản đồ minh họa vị trí nhà hàng GÔM tại 25 Lê Hồng Phong, Hải Châu, Đà Nẵng" class="map-card__img" />
+              <div class="map-card__badge">
+                <span class="map-pin-dot" aria-hidden="true"></span>
+                25 Lê Hồng Phong, Hải Châu
+              </div>
+            </div>
+
+            <!-- Info cards -->
+            <div class="visit-info-grid">
+              <div class="visit-card">
+                <span class="visit-card__label">Địa chỉ</span>
+                <p class="visit-card__value">25 Lê Hồng Phong, Hải Châu, Đà Nẵng</p>
+              </div>
+              <div class="visit-card">
+                <span class="visit-card__label">Giờ mở cửa</span>
+                <p class="visit-card__value">08:00 – 22:00 hằng ngày</p>
+                <p class="visit-card__status" id="visitOpenStatus">Đang mở cửa</p>
+              </div>
+              <div class="visit-card">
+                <span class="visit-card__label">Hotline</span>
+                <p class="visit-card__value">Sắp cập nhật</p>
+                <p class="visit-card__hint">Bạn có thể đặt bàn trực tiếp ngay trong ứng dụng</p>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="visit-actions">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=25+Le+Hong+Phong+Hai+Chau+Da+Nang"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--primary btn--full"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                </svg>
+                Chỉ đường
+              </a>
+              <button type="button" class="btn btn--soft btn--full" id="callGomBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                Gọi
+              </button>
+            </div>
+
+            <!-- Warm invitation footer -->
+            <div class="visit-invite">
+              <img src="../assets/wordmark-header.webp" alt="GÔM" class="visit-invite__wordmark" width="110" height="38" />
+              <p class="visit-invite__quote">“Gôm về bên nhau. Quây tròn bữa ăn vui.”</p>
+              <button type="button" class="btn btn--gold btn--sm" data-nav="dat-ban">Đặt bàn trước</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FLOATING GLASSY BOTTOM DOCK -->
+      <nav class="bottom-dock" aria-label="Điều hướng chính">
+        <button type="button" class="dock-item is-active" data-nav="home" aria-current="page">
+          <svg class="dock-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 10.5L12 3l9 7.5" />
+            <path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5" />
+          </svg>
+          <span class="dock-item__label">Trang chủ</span>
+        </button>
+
+        <button type="button" class="dock-item" data-nav="menu">
+          <svg class="dock-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 6h16" />
+            <path d="M4 12h16" />
+            <path d="M4 18h12" />
+          </svg>
+          <span class="dock-item__label">Thực đơn</span>
+        </button>
+
+        <button type="button" class="dock-item" data-nav="boc-mam">
+          <svg class="dock-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 8v4l3 2" />
+          </svg>
+          <span class="dock-item__label">Bốc mâm</span>
+        </button>
+
+        <button type="button" class="dock-item" data-nav="dat-ban">
+          <svg class="dock-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="17" rx="3" />
+            <path d="M16 2v4M8 2v4M3 10h18" />
+          </svg>
+          <span class="dock-item__label">Đặt bàn</span>
+        </button>
+
+        <button type="button" class="dock-item" data-nav="ghe-gom">
+          <svg class="dock-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 21s-6-5.2-6-10a6 6 0 1 1 12 0c0 4.8-6 10-6 10z" />
+            <circle cx="12" cy="11" r="2.2" />
+          </svg>
+          <span class="dock-item__label">Ghé GÔM</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- RIGHT DECORATIVE SIDE PANEL (Desktop only) -->
+    <aside class="side-panel side-panel--right" aria-label="Không khí và mâm của bạn">
+      <div class="side-photo-card">
+        <img src="../assets/photos/gathering.webp" alt="Bữa ăn quây quần tại GÔM" />
+        <div class="side-photo-card__scrim"></div>
+        <div class="side-photo-card__caption">
+          <span>Không khí nhà GÔM</span>
+          <strong>Mâm cơm tròn vị giữa lòng Đà Nẵng</strong>
+        </div>
+      </div>
+
+      <div class="side-tray-card">
+        <div class="side-tray-card__head">
+          <span class="side-card-heading">Mâm của bạn</span>
+          <span class="side-tray-count" id="sideTrayCount">0 món</span>
+        </div>
+        <p class="side-tray-card__desc" id="sideTrayDesc">Chưa có món nào. Chọn món từ Thực đơn hoặc thử Bốc mâm ngẫu nhiên hè!</p>
+        <button type="button" class="btn btn--soft btn--full" id="sideOpenTrayBtn">Mở danh sách mâm</button>
+      </div>
+
+      <div class="side-art-row">
+        <div class="side-mini-card">
+          <img src="../assets/rooster-card.webp" alt="" width="44" height="44" />
+          <div>
+            <strong>Bốc mâm</strong>
+            <span>1–20 người</span>
+          </div>
+        </div>
+        <div class="side-mini-card">
+          <img src="../assets/dino-card.webp" alt="" width="44" height="44" />
+          <div>
+            <strong>Giọng Quảng</strong>
+            <span>Vui cùng Dino</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ==================== BOTTOM SHEETS & TOAST ==================== -->
+  <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+
+  <!-- Dish Detail Bottom Sheet -->
+  <div class="bottom-sheet" id="dishSheet" role="dialog" aria-modal="true" aria-labelledby="dishSheetTitle" hidden>
+    <div class="bottom-sheet__handle" aria-hidden="true"></div>
+    <button type="button" class="sheet-close" data-close-sheet aria-label="Đóng">&times;</button>
+    <div class="dish-sheet__media">
+      <img id="dishSheetImg" src="" alt="" />
+    </div>
+    <div class="dish-sheet__body">
+      <span class="dish-sheet__cat" id="dishSheetCat"></span>
+      <h2 class="dish-sheet__title" id="dishSheetTitle"></h2>
+      <p class="dish-sheet__desc" id="dishSheetDesc"></p>
+      <div class="dish-sheet__tags" id="dishSheetTags"></div>
+      <div class="dish-sheet__footer">
+        <div class="stepper stepper--sm" role="group" aria-label="Chọn số lượng món">
+          <button type="button" class="stepper__btn" id="dishQtyMinus" aria-label="Giảm số lượng">−</button>
+          <output class="stepper__val" id="dishQtyVal">1</output>
+          <button type="button" class="stepper__btn" id="dishQtyPlus" aria-label="Tăng số lượng">+</button>
+        </div>
+        <button type="button" class="btn btn--primary dish-sheet__cta" id="addDishToTrayBtn">Thêm vào mâm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tray Bottom Sheet -->
+  <div class="bottom-sheet" id="traySheet" role="dialog" aria-modal="true" aria-labelledby="traySheetTitle" hidden>
+    <div class="bottom-sheet__handle" aria-hidden="true"></div>
+    <button type="button" class="sheet-close" data-close-sheet aria-label="Đóng">&times;</button>
+    <div class="sheet-head">
+      <h2 class="sheet-title" id="traySheetTitle">Mâm của bạn</h2>
+      <button type="button" class="text-link" id="clearTrayBtn">Xóa hết</button>
+    </div>
+    <div class="tray-list" id="trayList"></div>
+    <div class="tray-empty" id="trayEmptyState" hidden>
+      <p>Mâm đang trống hè! Chọn vài món từ Thực đơn hoặc Bốc mâm để GÔM gợi ý nhé.</p>
+      <div class="tray-empty__actions">
+        <button type="button" class="btn btn--soft" id="trayGoMenuBtn">Xem thực đơn</button>
+        <button type="button" class="btn btn--primary" id="trayGoBocBtn">Bốc mâm</button>
+      </div>
+    </div>
+    <div class="tray-sheet__footer" id="traySheetFooter" hidden>
+      <button type="button" class="btn btn--primary btn--full" id="trayProceedBookingBtn">Đặt bàn kèm mâm này</button>
+    </div>
+  </div>
+
+  <!-- Booking Success Bottom Sheet -->
+  <div class="bottom-sheet" id="bookingSuccessSheet" role="dialog" aria-modal="true" aria-labelledby="bookingSuccessTitle" hidden>
+    <div class="bottom-sheet__handle" aria-hidden="true"></div>
+    <button type="button" class="sheet-close" data-close-sheet aria-label="Đóng">&times;</button>
+    <div class="success-sheet">
+      <div class="success-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      </div>
+      <h2 class="success-title" id="bookingSuccessTitle">GÔM đã giữ bàn cho bạn!</h2>
+      <p class="success-sub">Hẹn gặp bạn tại 25 Lê Hồng Phong, Hải Châu, Đà Nẵng hè.</p>
+
+      <div class="booking-code-box">
+        <span class="booking-code-box__label">Mã đặt bàn</span>
+        <strong class="booking-code-box__code" id="bookingCodeValue">GOM-0000</strong>
+        <button type="button" class="btn btn--soft btn--sm" id="copyBookingCodeBtn">Sao chép mã</button>
+      </div>
+
+      <dl class="booking-summary-list" id="bookingSummaryDetails"></dl>
+
+      <button type="button" class="btn btn--primary btn--full" data-close-sheet>Xong, cảm ơn GÔM</button>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="app-toast" id="appToast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

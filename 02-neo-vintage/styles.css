@@ -1,0 +1,1776 @@
+/* ==========================================================================
+   GÔM — 02 Heritage / Neo-Vintage
+   Central-Vietnam Shophouse & Aged Paper Aesthetic
+   ========================================================================== */
+
+:root {
+  /* Palette: Lacquer Red, Antique Bronze, Aged Parchment, Kraft, Sepia Ink */
+  --lacquer: #851923;
+  --lacquer-deep: #621119;
+  --lacquer-soft: #a02530;
+  --bronze: #c69d59;
+  --bronze-light: #e0c285;
+  --bronze-dark: #8e6b32;
+  --parchment: #f5ebd6;
+  --parchment-light: #fbf5e8;
+  --kraft: #e6d2ae;
+  --kraft-deep: #d4ba8d;
+  --ink: #2c1612;
+  --ink-muted: #593b32;
+  --ink-soft: #75564a;
+  --cream-text: #faf2e1;
+
+  /* Disciplined Typography Scale (>= 16px body, >= 12px labels) */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --text-xs: 0.75rem;    /* 12px — stamps, micro labels */
+  --text-sm: 0.875rem;   /* 14px — captions, metadata */
+  --text-base: 1rem;     /* 16px — body copy */
+  --text-md: 1.125rem;   /* 18px — lead copy, subheadings */
+  --text-lg: 1.375rem;   /* 22px — card headings */
+  --text-xl: 1.75rem;    /* 28px — section sub-titles */
+  --text-2xl: clamp(1.875rem, 3.4vw, 2.625rem); /* 30px–42px chapter titles */
+  --text-hero: clamp(2.125rem, 4.4vw, 3.375rem); /* 34px–54px hero */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-paper: 0 10px 28px rgba(44, 22, 18, 0.12);
+  --shadow-card: 0 4px 14px rgba(44, 22, 18, 0.09);
+
+  /* Subtle paper grain via SVG data-URI */
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--parchment);
+  background-image:
+    var(--paper-grain),
+    radial-gradient(ellipse at top left, rgba(212, 178, 115, 0.22), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(133, 25, 35, 0.08), transparent 55%);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+.container {
+  width: min(1160px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--lacquer);
+  color: var(--cream-text);
+  padding: 0.75rem 1rem;
+  z-index: 999;
+}
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+/* ==========================================================================
+   Header: Printed Shophouse Signboard + Ribbon
+   ========================================================================== */
+.signboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--lacquer-deep);
+  color: var(--cream-text);
+  box-shadow: 0 6px 20px rgba(44, 22, 18, 0.22);
+}
+
+.signboard-top {
+  background: #460b11;
+  border-bottom: 1px solid rgba(212, 178, 115, 0.35);
+  padding: 0.35rem 0;
+}
+
+.signboard-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  color: var(--bronze-light);
+  text-align: center;
+}
+
+.meta-dot {
+  color: var(--bronze);
+  font-size: 0.65rem;
+}
+
+.signboard-main {
+  background-color: var(--lacquer);
+  background-image: var(--paper-grain);
+  border-bottom: 2px solid var(--bronze);
+}
+
+.signboard-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+.brand-plaque {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid rgba(224, 194, 133, 0.45);
+  border-radius: var(--radius-sm);
+  background: rgba(66, 10, 15, 0.45);
+}
+
+.brand-wordmark {
+  width: 96px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-sub {
+  font-size: var(--text-xs);
+  letter-spacing: 0.11em;
+  color: var(--bronze-light);
+  border-left: 1px solid rgba(224, 194, 133, 0.4);
+  padding-left: 0.75rem;
+  font-weight: 600;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--cream-text);
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  color: var(--bronze-light);
+  border-bottom-color: var(--bronze-light);
+}
+
+.btn-ticket-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--parchment);
+  color: var(--lacquer-deep);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1.15rem;
+  border: 2px dashed var(--bronze-dark);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 0 var(--lacquer-deep);
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.btn-ticket-nav:hover,
+.btn-ticket-nav:focus-visible {
+  background: var(--bronze-light);
+  transform: translateY(-1px);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: rgba(66, 10, 15, 0.5);
+  border: 1px solid rgba(224, 194, 133, 0.5);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 0 9px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--cream-text);
+  border-radius: 2px;
+}
+
+/* Vintage Ribbon below header */
+.ribbon-wrap {
+  background: var(--kraft);
+  border-bottom: 1px solid rgba(142, 107, 50, 0.45);
+  padding: 0.35rem 0.75rem;
+  text-align: center;
+}
+
+.vintage-ribbon {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.45rem 0.85rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--lacquer-deep);
+}
+
+.ribbon-sep {
+  color: var(--bronze-dark);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  font-size: var(--text-base);
+  font-weight: 600;
+  padding: 0.78rem 1.45rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.18s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--lacquer);
+  color: var(--cream-text);
+  border: 2px solid var(--lacquer-deep);
+  box-shadow: 0 3px 0 var(--lacquer-deep);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: var(--lacquer-soft);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--parchment-light);
+  color: var(--ink);
+  border: 2px solid var(--bronze-dark);
+  box-shadow: 0 3px 0 rgba(142, 107, 50, 0.35);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: var(--kraft);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Postage-Style Photo Frames
+   ========================================================================== */
+.postage-frame {
+  margin: 0;
+  padding: 12px;
+  background: var(--parchment-light);
+  border: 1px solid rgba(142, 107, 50, 0.55);
+  box-shadow: var(--shadow-paper);
+  position: relative;
+  /* Subtle perforated stamp edge illusion */
+  outline: 2px dashed rgba(142, 107, 50, 0.42);
+  outline-offset: -6px;
+}
+
+.postage-frame img {
+  width: 100%;
+  object-fit: cover;
+  filter: sepia(10%) contrast(1.03);
+}
+
+.photo-caption {
+  margin-top: 0.65rem;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Hero Broadsheet
+   ========================================================================== */
+.hero-section {
+  padding: clamp(2rem, 4vw, 3.5rem) 0 2rem;
+}
+
+.broadsheet-frame {
+  position: relative;
+  background-color: var(--parchment-light);
+  background-image: var(--paper-grain);
+  border: 2px solid var(--bronze-dark);
+  outline: 1px solid rgba(142, 107, 50, 0.5);
+  outline-offset: -8px;
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  box-shadow: var(--shadow-paper);
+}
+
+.corner-ornament {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-color: var(--lacquer);
+  border-style: solid;
+  pointer-events: none;
+}
+.corner-tl { top: 10px; left: 10px; border-width: 2px 0 0 2px; }
+.corner-tr { top: 10px; right: 10px; border-width: 2px 2px 0 0; }
+.corner-bl { bottom: 10px; left: 10px; border-width: 0 0 2px 2px; }
+.corner-br { bottom: 10px; right: 10px; border-width: 0 2px 2px 0; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: clamp(1.75rem, 3.5vw, 3rem);
+  align-items: center;
+}
+
+.chapter-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--lacquer);
+  margin-bottom: 0.85rem;
+}
+
+.kicker-line {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--bronze-dark);
+}
+
+.hero-title {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  line-height: 1.16;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.hero-title em {
+  color: var(--lacquer);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.hero-lead {
+  margin: 0 0 1.5rem;
+  font-size: var(--text-md);
+  color: var(--ink-muted);
+  max-width: 54ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin: 0;
+  padding-top: 1.25rem;
+  border-top: 1px double rgba(142, 107, 50, 0.55);
+}
+
+.pillar-item dt {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--lacquer);
+  margin-bottom: 0.2rem;
+}
+
+.pillar-item dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+  line-height: 1.45;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.hero-photo-frame img {
+  aspect-ratio: 4 / 3;
+}
+
+.rooster-stamp-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--kraft);
+  border: 2px dashed var(--lacquer);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.rooster-stamp-card img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.stamp-overline {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--lacquer);
+}
+
+.rooster-stamp-text strong {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   Ornamental Chapter Dividers & Headers
+   ========================================================================== */
+.chapter-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: min(760px, 100% - 2rem);
+  margin: 2rem auto;
+  color: var(--bronze-dark);
+}
+
+.divider-rule {
+  flex: 1;
+  height: 3px;
+  border-top: 1px solid rgba(142, 107, 50, 0.65);
+  border-bottom: 1px solid rgba(142, 107, 50, 0.35);
+}
+
+.divider-motif {
+  font-size: 1.1rem;
+  color: var(--lacquer);
+}
+
+.chapter-section {
+  padding: 1.25rem 0 2.25rem;
+}
+
+.chapter-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 2rem;
+}
+
+.chapter-num {
+  display: inline-block;
+  margin: 0 0 0.4rem;
+  padding: 0.2rem 0.75rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--lacquer);
+  border: 1px solid var(--bronze-dark);
+  background: var(--parchment-light);
+}
+
+.chapter-title {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.chapter-subtitle {
+  margin: 0;
+  font-size: var(--text-md);
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   Chapter 1: Memoir Story
+   ========================================================================== */
+.memoir-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.memoir-card {
+  background: var(--parchment-light);
+  background-image: var(--paper-grain);
+  border: 1px solid rgba(142, 107, 50, 0.55);
+  padding: clamp(1.4rem, 3vw, 2.25rem);
+  box-shadow: var(--shadow-card);
+}
+
+.dropcap-para::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 3.3rem;
+  line-height: 0.85;
+  padding-right: 0.55rem;
+  padding-top: 0.2rem;
+  color: var(--lacquer);
+  font-weight: 800;
+}
+
+.memoir-card p {
+  margin: 0 0 1.1rem;
+  color: var(--ink);
+}
+
+.heritage-quote {
+  margin: 1.4rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--kraft);
+  border-left: 4px solid var(--lacquer);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.memoir-stamps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.wax-seal-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem;
+  background: var(--parchment);
+  border: 1px dashed rgba(133, 25, 35, 0.45);
+  border-radius: var(--radius-sm);
+}
+
+.wax-seal-badge img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.wax-seal-badge strong {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--lacquer-deep);
+}
+
+.wax-seal-badge span {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
+.memoir-gallery-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.memoir-photo-lg img {
+  aspect-ratio: 16 / 10;
+}
+
+.memoir-photo-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.memoir-photo-pair img {
+  aspect-ratio: 4 / 3;
+}
+
+/* ==========================================================================
+   Chapter 2: Old Printed Menu Board with Dotted Leaders
+   ========================================================================== */
+.menu-board {
+  background: var(--lacquer-deep);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-paper);
+}
+
+.menu-board-inner {
+  background-color: var(--parchment-light);
+  background-image: var(--paper-grain);
+  border: 2px solid var(--bronze);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.menu-board-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 2px double rgba(142, 107, 50, 0.65);
+  margin-bottom: 1.25rem;
+}
+
+.menu-board-seal {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.board-label {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--lacquer);
+}
+
+.board-heading {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--ink);
+}
+
+.board-count {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-muted);
+  background: var(--kraft);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(142, 107, 50, 0.45);
+}
+
+.menu-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-tab {
+  background: var(--parchment);
+  color: var(--ink);
+  border: 1px solid rgba(142, 107, 50, 0.55);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.95rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-tab:hover,
+.menu-tab:focus-visible {
+  background: var(--kraft);
+  border-color: var(--lacquer);
+}
+
+.menu-tab[aria-selected="true"] {
+  background: var(--lacquer);
+  color: var(--cream-text);
+  border-color: var(--lacquer-deep);
+}
+
+.menu-ledger {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem 2.25rem;
+}
+
+.dish-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.55rem 0.25rem;
+  border-bottom: 1px solid rgba(142, 107, 50, 0.22);
+}
+
+.dish-thumb {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: radial-gradient(circle, rgba(230, 210, 174, 0.7), transparent 72%);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.dish-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dish-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.dish-name {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.dish-leader {
+  flex: 1;
+  min-width: 18px;
+  border-bottom: 2px dotted rgba(142, 107, 50, 0.65);
+  transform: translateY(-3px);
+}
+
+.dish-tag {
+  flex-shrink: 0;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--lacquer);
+  text-transform: uppercase;
+}
+
+.dish-note {
+  margin: 0.2rem 0 0;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+  line-height: 1.4;
+}
+
+.menu-board-footer {
+  margin-top: 1.65rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(142, 107, 50, 0.6);
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   Chapter 3: Phiếu bốc mâm (Ticket) & Dino Quảng Nam
+   ========================================================================== */
+.play-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.raffle-ticket {
+  background-color: var(--parchment-light);
+  background-image: var(--paper-grain);
+  border: 2px solid var(--lacquer);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-paper);
+  overflow: hidden;
+}
+
+.ticket-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--lacquer);
+  color: var(--cream-text);
+  border-bottom: 3px double var(--bronze);
+}
+
+.ticket-kicker {
+  display: block;
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  color: var(--bronze-light);
+  font-weight: 700;
+}
+
+.ticket-header h3 {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+}
+
+.ticket-serial {
+  text-align: right;
+  padding: 0.4rem 0.75rem;
+  border: 1px dashed var(--bronze-light);
+  border-radius: var(--radius-sm);
+  background: rgba(66, 10, 15, 0.4);
+}
+
+.ticket-serial span {
+  display: block;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--bronze-light);
+}
+
+.ticket-serial strong {
+  font-family: monospace;
+  font-size: var(--text-md);
+  letter-spacing: 0.08em;
+}
+
+.ticket-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.35rem 1.5rem;
+  background: var(--kraft);
+}
+
+.guest-picker {
+  flex: 1 1 280px;
+}
+
+.picker-label {
+  display: block;
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: 0.55rem;
+}
+
+.picker-label strong {
+  color: var(--lacquer);
+}
+
+.guest-stepper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.step-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--lacquer);
+  background: var(--parchment-light);
+  color: var(--lacquer-deep);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.step-btn:hover,
+.step-btn:focus-visible {
+  background: var(--lacquer);
+  color: var(--cream-text);
+}
+
+.guest-stepper input[type="range"] {
+  flex: 1;
+  accent-color: var(--lacquer);
+  cursor: pointer;
+}
+
+.picker-hint {
+  margin: 0.45rem 0 0;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.btn-stamp {
+  background: var(--lacquer);
+  color: var(--cream-text);
+  border: none;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: 0 4px 0 var(--lacquer-deep);
+  transition: transform 0.15s ease;
+}
+
+.btn-stamp-inner {
+  display: block;
+  padding: 0.7rem 1.4rem;
+  border: 1px dashed var(--bronze-light);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.btn-stamp:hover,
+.btn-stamp:focus-visible {
+  transform: translateY(-2px);
+}
+
+.ticket-perforation {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 24px;
+  background: var(--parchment-light);
+}
+
+.perf-dashes {
+  width: 100%;
+  border-top: 2px dashed rgba(133, 25, 35, 0.45);
+}
+
+.perf-notch {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--parchment);
+  border: 2px solid var(--lacquer);
+}
+
+.perf-left { left: -12px; }
+.perf-right { right: -12px; }
+
+.ticket-result {
+  padding: 1.35rem 1.5rem 1.65rem;
+}
+
+.tray-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.65rem;
+  padding: 1.25rem 0.5rem;
+  color: var(--ink-muted);
+}
+
+.tray-empty-state p {
+  margin: 0;
+  max-width: 40ch;
+}
+
+.tray-summary-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(142, 107, 50, 0.4);
+}
+
+.tray-summary-bar strong {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--lacquer-deep);
+}
+
+.tray-stamp-badge {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--lacquer);
+  border: 2px solid var(--lacquer);
+  padding: 0.18rem 0.55rem;
+  transform: rotate(-2deg);
+}
+
+.tray-dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.tray-dish-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  background: var(--parchment);
+  border: 1px solid rgba(142, 107, 50, 0.45);
+  border-radius: var(--radius-sm);
+}
+
+.tray-dish-card img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.tray-dish-cat {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--lacquer);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tray-dish-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.tray-footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.15rem;
+  padding-top: 0.9rem;
+  border-top: 1px dashed rgba(142, 107, 50, 0.5);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+/* Side Dialect Card */
+.dialect-card {
+  background-color: var(--kraft);
+  background-image: var(--paper-grain);
+  border: 2px solid var(--bronze-dark);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.dialect-stamp-top {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--cream-text);
+  background: var(--lacquer);
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.dialect-mascot img {
+  margin: 0 auto 0.65rem;
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+}
+
+.dialect-title {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--ink);
+}
+
+.dialect-intro {
+  margin: 0 0 1rem;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.dialect-word-box {
+  background: var(--parchment-light);
+  border: 1px dashed var(--bronze-dark);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.dialect-tag {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--lacquer);
+  margin-bottom: 0.3rem;
+}
+
+.dialect-word {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.dialect-meaning,
+.dialect-example {
+  margin: 0 0 0.4rem;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.dialect-example {
+  margin-bottom: 0;
+  color: var(--lacquer-deep);
+}
+
+.dialect-btn {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Chapter 4: Postcard & Ticket Booking Form
+   ========================================================================== */
+.postcard {
+  display: grid;
+  grid-template-columns: 1.05fr 2px 0.95fr;
+  gap: 1.75rem;
+  background-color: var(--parchment-light);
+  background-image: var(--paper-grain);
+  border: 2px solid var(--bronze-dark);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  box-shadow: var(--shadow-paper);
+  margin-bottom: 2.25rem;
+  position: relative;
+}
+
+.postcard-map-frame {
+  background: var(--parchment);
+  border: 1px solid rgba(142, 107, 50, 0.5);
+  padding: 0.65rem;
+}
+
+.postcard-map-frame img {
+  width: 100%;
+  height: auto;
+}
+
+.map-caption {
+  margin: 0.65rem 0 0;
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+.postcard-spine {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--bronze-dark) 0,
+    var(--bronze-dark) 8px,
+    transparent 8px,
+    transparent 14px
+  );
+}
+
+.postcard-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.postcard-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.postcard-kicker {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--lacquer);
+}
+
+.postcard-title-block h3 {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+}
+
+.postage-stamp-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
+
+.postmark-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px double rgba(133, 25, 35, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--lacquer);
+  font-size: 0.625rem;
+  line-height: 1.25;
+  transform: rotate(-10deg);
+}
+
+.postmark-circle strong {
+  font-size: 0.6875rem;
+}
+
+.mini-stamp {
+  padding: 5px;
+  background: var(--parchment);
+  border: 2px dashed var(--bronze-dark);
+}
+
+.mini-stamp img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.postcard-lines {
+  margin: 0;
+}
+
+.postcard-line {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 0.5rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(142, 107, 50, 0.45);
+}
+
+.postcard-line dt {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--lacquer-deep);
+}
+
+.postcard-line dd {
+  margin: 0;
+  font-size: var(--text-base);
+  color: var(--ink);
+}
+
+.postcard-note {
+  margin-top: 1.15rem;
+  padding: 0.85rem 1rem;
+  background: var(--kraft);
+  border-left: 3px solid var(--lacquer);
+}
+
+.postcard-note p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-base);
+  color: var(--ink);
+}
+
+/* Ticket Booking Form */
+.booking-ticket {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  background: var(--parchment-light);
+  border: 2px solid var(--lacquer);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-paper);
+}
+
+.booking-ticket-stub {
+  background-color: var(--lacquer);
+  background-image: var(--paper-grain);
+  color: var(--cream-text);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border-right: 3px dashed var(--bronze-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stub-label {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--bronze-light);
+  margin-bottom: 0.35rem;
+}
+
+.booking-ticket-stub h3 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+}
+
+.booking-ticket-stub p {
+  margin: 0 0 1rem;
+  font-size: var(--text-sm);
+  color: #f3e4c9;
+}
+
+.stub-notes {
+  margin: 0 0 1.4rem;
+  padding-left: 1.1rem;
+  font-size: var(--text-sm);
+  color: var(--bronze-light);
+}
+
+.stub-notes li {
+  margin-bottom: 0.35rem;
+}
+
+.stub-emblem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(224, 194, 133, 0.35);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--bronze-light);
+  font-weight: 600;
+}
+
+.booking-ticket-body {
+  padding: clamp(1.4rem, 3vw, 2rem);
+  background-image: var(--paper-grain);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-row-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  background: #fffcf5;
+  border: 1px solid rgba(142, 107, 50, 0.65);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-base);
+  color: var(--ink);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: 2px solid var(--lacquer);
+  outline-offset: 1px;
+  border-color: var(--lacquer);
+}
+
+.form-error {
+  margin: 0 0 0.85rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--lacquer);
+  min-height: 1.25rem;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-disclaimer {
+  font-size: var(--text-xs);
+  color: var(--ink-soft);
+}
+
+.booking-confirmation {
+  padding: 0.5rem 0;
+}
+
+.confirm-stamp {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--lacquer);
+  border: 2px solid var(--lacquer);
+  padding: 0.25rem 0.7rem;
+  margin-bottom: 0.85rem;
+  transform: rotate(-1.5deg);
+}
+
+.booking-confirmation h4 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--ink);
+}
+
+.confirm-code {
+  margin: 0 0 1rem;
+  font-size: var(--text-base);
+  color: var(--ink-muted);
+}
+
+.confirm-code strong {
+  color: var(--lacquer);
+  font-family: monospace;
+  font-size: var(--text-md);
+}
+
+.confirm-summary {
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  background: var(--kraft);
+  border: 1px dashed var(--bronze-dark);
+  border-radius: var(--radius-sm);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 1rem;
+}
+
+.confirm-summary dt {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.confirm-summary dd {
+  margin: 0.1rem 0 0;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.heritage-footer {
+  margin-top: 3rem;
+  background-color: var(--lacquer-deep);
+  background-image: var(--paper-grain);
+  color: var(--cream-text);
+  border-top: 4px double var(--bronze);
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2.75rem 0 2rem;
+}
+
+.footer-slogan {
+  margin: 0.85rem 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--bronze-light);
+}
+
+.footer-values {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: #eadbc1;
+}
+
+.footer-col h4 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  color: var(--bronze-light);
+}
+
+.footer-col p {
+  margin: 0 0 0.45rem;
+  font-size: var(--text-sm);
+  color: #f3e6d0;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.45rem;
+  font-size: var(--text-sm);
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #f3e6d0;
+}
+
+.footer-col a:hover,
+.footer-col a:focus-visible {
+  color: var(--bronze-light);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background: #460b11;
+  border-top: 1px solid rgba(224, 194, 133, 0.25);
+  padding: 1rem 0 3.75rem;
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--bronze-light);
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Fixed Back Link ("← Các phong cách")
+   ========================================================================== */
+.back-to-styles {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--cream-text);
+  background: var(--lacquer-deep);
+  border: 1px solid var(--bronze-light);
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 14px rgba(44, 22, 18, 0.28);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.back-to-styles:hover,
+.back-to-styles:focus-visible {
+  background: var(--lacquer);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (Desktop 1280px → Tablet → Mobile 375px)
+   ========================================================================== */
+@media (max-width: 980px) {
+  .hero-grid,
+  .memoir-layout,
+  .play-grid,
+  .booking-ticket {
+    grid-template-columns: 1fr;
+  }
+
+  .postcard {
+    grid-template-columns: 1fr;
+  }
+
+  .postcard-spine {
+    height: 2px;
+    background: repeating-linear-gradient(
+      to right,
+      var(--bronze-dark) 0,
+      var(--bronze-dark) 8px,
+      transparent 8px,
+      transparent 14px
+    );
+  }
+
+  .booking-ticket-stub {
+    border-right: none;
+    border-bottom: 3px dashed var(--bronze-light);
+  }
+
+  .menu-ledger {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-sub {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    background: var(--lacquer-deep);
+    border-top: 1px solid rgba(224, 194, 133, 0.35);
+    border-bottom: 2px solid var(--bronze);
+    padding: 1rem;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 0.55rem 0.4rem;
+    font-size: var(--text-base);
+  }
+
+  .btn-ticket-nav {
+    margin-top: 0.4rem;
+    text-align: center;
+  }
+
+  .hero-pillars,
+  .memoir-stamps,
+  .memoir-photo-pair,
+  .tray-dishes-grid,
+  .form-row,
+  .form-row-3,
+  .confirm-summary,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .postcard-line {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .postcard-header-row {
+    flex-direction: column;
+  }
+
+  .dish-thumb {
+    width: 52px;
+    height: 52px;
+  }
+
+  .signboard-meta .meta-dot {
+    display: none;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GÔM — Ẩm Thực Miền Trung · Đà Nẵng</title>
+  <meta name="description" content="Gôm về bên nhau. Quây tròn bữa ăn vui. Nhà hàng ẩm thực miền Trung tại 25 Lê Hồng Phong, Hải Châu, Đà Nẵng.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Chuyển đến nội dung chính</a>
+
+  <!-- Minimal Transparent Navigation -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand-link" href="#hero" aria-label="GÔM — Trang chủ">
+      <img src="../assets/wordmark-header.webp" alt="GÔM" class="brand-wordmark" width="112" height="36">
+    </a>
+
+    <div class="header-actions">
+      <a class="header-book-link" href="#dat-ban">Đặt bàn</a>
+      <button
+        type="button"
+        class="menu-trigger"
+        id="menuTrigger"
+        aria-expanded="false"
+        aria-controls="navOverlay"
+        aria-label="Mở menu điều hướng"
+      >
+        <span class="menu-trigger-label">Menu</span>
+        <span class="menu-trigger-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Fullscreen Dark Navigation Overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Điều hướng GÔM">
+    <div class="nav-overlay-backdrop"></div>
+    <div class="nav-overlay-inner">
+      <div class="nav-overlay-top">
+        <span class="nav-overlay-eyebrow">25 Lê Hồng Phong · Hải Châu · Đà Nẵng</span>
+        <button type="button" class="nav-close" id="navClose" aria-label="Đóng menu">
+          <span>Đóng</span>
+          <span class="nav-close-x" aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="nav-overlay-body">
+        <nav class="nav-overlay-links" aria-label="Điều hướng chính">
+          <a href="#chuyen-gom" class="nav-link" data-nav-link>
+            <span class="nav-link-num">01</span>
+            <span class="nav-link-text">Chuyện GÔM</span>
+          </a>
+          <a href="#thuc-don" class="nav-link" data-nav-link>
+            <span class="nav-link-num">02</span>
+            <span class="nav-link-text">Thực đơn</span>
+          </a>
+          <a href="#choi-cung-gom" class="nav-link" data-nav-link>
+            <span class="nav-link-num">03</span>
+            <span class="nav-link-text">Chơi cùng GÔM</span>
+          </a>
+          <a href="#ghe-gom" class="nav-link" data-nav-link>
+            <span class="nav-link-num">04</span>
+            <span class="nav-link-text">Ghé GÔM</span>
+          </a>
+          <a href="#dat-ban" class="nav-link nav-link--accent" data-nav-link>
+            <span class="nav-link-num">05</span>
+            <span class="nav-link-text">Đặt bàn</span>
+          </a>
+        </nav>
+
+        <aside class="nav-overlay-meta">
+          <p class="nav-overlay-quote">“Gôm về bên nhau.<br>Quây tròn bữa ăn vui.”</p>
+          <div class="nav-overlay-info">
+            <div>
+              <span class="meta-label">Địa chỉ</span>
+              <p>25 Lê Hồng Phong, Hải Châu, Đà Nẵng</p>
+            </div>
+            <div>
+              <span class="meta-label">Giờ mở cửa</span>
+              <p>8AM – 10PM · Mỗi ngày</p>
+            </div>
+            <div>
+              <span class="meta-label">Hotline</span>
+              <p>Sắp cập nhật</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- HERO: Full-viewport Video -->
+    <section class="hero" id="hero" aria-label="Giới thiệu GÔM">
+      <div class="hero-media">
+        <video
+          id="heroVideo"
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="../assets/photos/coffee-roasting-poster.jpg"
+        >
+          <source src="../assets/photos/coffee-roasting.mp4" type="video/mp4">
+        </video>
+        <div class="hero-scrim" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal-on-load">Đà Nẵng · Ẩm thực miền Trung</p>
+        <h1 class="hero-title reveal-on-load">Gôm về bên nhau.<br><em>Quây tròn bữa ăn vui.</em></h1>
+        <p class="hero-sub reveal-on-load">Đậm trong hương vị · Tươi trong nguyên liệu · Vui trong trải nghiệm</p>
+      </div>
+
+      <div class="hero-footer">
+        <a href="#chuyen-gom" class="scroll-cue" aria-label="Cuộn xuống xem câu chuyện GÔM">
+          <span class="scroll-cue-text">Cuộn để bước vào</span>
+          <span class="scroll-cue-line" aria-hidden="true"></span>
+        </a>
+        <button type="button" class="video-toggle" id="videoToggle" aria-label="Tạm dừng video nền">
+          <span id="videoToggleText">Tạm dừng</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- FULL-BLEED CINEMATIC SCENES: 01 - 04 -->
+    <div id="chuyen-gom" class="scenes-wrapper">
+      <!-- Scene 01 -->
+      <section class="scene" data-scene>
+        <div class="scene-bg">
+          <img
+            src="../assets/photos/gathering.webp"
+            alt="Mâm cơm miền Trung quây quần bên nhau tại GÔM"
+            class="scene-img"
+            loading="eager"
+          >
+          <div class="scene-scrim scene-scrim--bottom" aria-hidden="true"></div>
+        </div>
+        <div class="scene-sticky">
+          <div class="scene-content">
+            <p class="scene-chapter">01 — Tiếng gọi</p>
+            <h2 class="scene-line">Người miền Trung gọi nhau bằng một tiếng “gôm” mộc mạc — có khách thì thêm đôi đũa, có món ngon thì gắp cho nhau miếng đầu tiên.</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 02 -->
+      <section class="scene" data-scene>
+        <div class="scene-bg">
+          <img
+            src="../assets/photos/01-89190164.webp"
+            alt="Không gian ấm cúng và hương vị đậm đà tại GÔM"
+            class="scene-img"
+            loading="lazy"
+          >
+          <div class="scene-scrim scene-scrim--center" aria-hidden="true"></div>
+        </div>
+        <div class="scene-sticky">
+          <div class="scene-content">
+            <p class="scene-chapter">02 — Đậm</p>
+            <h2 class="scene-line">Đậm trong từng nồi kho liu riu, từng chén mắm nêm dậy mùi và hơi lửa bếp giữ trọn vị quê giữa lòng phố biển.</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 03 -->
+      <section class="scene" data-scene>
+        <div class="scene-bg">
+          <img
+            src="../assets/photos/garden.webp"
+            alt="Lối đi xanh mát và không gian thiên nhiên ở GÔM"
+            class="scene-img"
+            loading="lazy"
+          >
+          <div class="scene-scrim scene-scrim--bottom" aria-hidden="true"></div>
+        </div>
+        <div class="scene-sticky">
+          <div class="scene-content">
+            <p class="scene-chapter">03 — Tươi</p>
+            <h2 class="scene-line">Tươi từ mớ rau sống giòn rụm, mẻ hải sản sớm từ biển Đà Nẵng đến khoảng sân xanh mát rượi đón gió vào nhà.</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scene 04 -->
+      <section class="scene" data-scene>
+        <div class="scene-bg">
+          <img
+            src="../assets/photos/coffee-together.webp"
+            alt="Bạn bè nâng ly và hàn huyên bên bàn cà phê GÔM"
+            class="scene-img"
+            loading="lazy"
+          >
+          <div class="scene-scrim scene-scrim--center" aria-hidden="true"></div>
+        </div>
+        <div class="scene-sticky">
+          <div class="scene-content">
+            <p class="scene-chapter">04 — Vui</p>
+            <h2 class="scene-line">Món ngon đặt giữa bàn, câu chuyện nối câu chuyện — ngồi từ ly cà phê sáng cho tới bữa tối rộn ràng tiếng cười.</h2>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ATMOSPHERE FILMSTRIP: Photos 02-12 + Drinks -->
+    <section class="atmosphere" aria-labelledby="atmosphereHeading" data-reveal>
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="section-eyebrow">Không gian &amp; nhịp sống</p>
+            <h2 class="section-title" id="atmosphereHeading">Một thoáng GÔM qua từng khung hình</h2>
+          </div>
+          <p class="section-lead">Từ ánh đèn vàng hắt lên tường gạch ấm đến ly nước mát tay chiều Đà Nẵng — góc nào cũng chừa sẵn một chỗ cho người quen.</p>
+        </div>
+      </div>
+
+      <div class="filmstrip" role="region" aria-label="Bộ ảnh không gian GÔM" tabindex="0">
+        <figure class="film-frame film-frame--wide">
+          <img src="../assets/photos/drinks.webp" alt="Đồ uống mát lành tại GÔM" loading="lazy">
+          <figcaption>Nước mát &amp; rượu hồng đào</figcaption>
+        </figure>
+        <figure class="film-frame">
+          <img src="../assets/photos/02-9bab64b8.webp" alt="Góc bàn ăn ấm cúng tại GÔM" loading="lazy">
+          <figcaption>Góc bàn quây quần</figcaption>
+        </figure>
+        <figure class="film-frame">
+          <img src="../assets/photos/06-5f1128a8.webp" alt="Chi tiết trang trí sơn mài và gỗ" loading="lazy">
+          <figcaption>Sắc gỗ &amp; sơn mài</figcaption>
+        </figure>
+        <figure class="film-frame">
+          <img src="../assets/photos/07-1d4629ee.webp" alt="Ánh sáng buổi chiều trong nhà hàng" loading="lazy">
+          <figcaption>Nắng chiều ghé hiên</figcaption>
+        </figure>
+        <figure class="film-frame">
+          <img src="../assets/photos/11-befb66be.webp" alt="Không khí sum họp tại GÔM" loading="lazy">
+          <figcaption>Bữa cơm cuối ngày</figcaption>
+        </figure>
+        <figure class="film-frame">
+          <img src="../assets/photos/12-88af7984.webp" alt="Chi tiết mâm món miền Trung" loading="lazy">
+          <figcaption>Trọn vị miền Trung</figcaption>
+        </figure>
+        <figure class="film-frame">
+          <img src="../assets/photos/08-0a63984a.webp" alt="Không gian GÔM nhìn từ bên trong" loading="lazy">
+          <figcaption>Khoảng lặng giữa phố</figcaption>
+        </figure>
+        <figure class="film-frame">
+          <img src="../assets/photos/09-adbfae09.webp" alt="Bàn ăn chuẩn bị đón khách" loading="lazy">
+          <figcaption>Thêm chén thêm đũa</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SIGNATURE DISHES & FULL 44-DISH MENU CAROUSEL -->
+    <section class="dishes-section" id="thuc-don" aria-labelledby="dishesHeading" data-reveal>
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="section-eyebrow">Thực đơn 44 món · 7 nhóm vị</p>
+            <h2 class="section-title" id="dishesHeading">Ăn chi hè?</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Điều khiển danh sách món">
+            <button type="button" class="icon-btn" id="dishPrev" aria-label="Món trước">
+              <span aria-hidden="true">←</span>
+            </button>
+            <span class="dish-counter" id="dishCounter">01 / 10</span>
+            <button type="button" class="icon-btn" id="dishNext" aria-label="Món tiếp theo">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Nhóm món ăn">
+          <!-- Rendered by app.js -->
+        </div>
+      </div>
+
+      <div class="dish-carousel" id="dishCarousel" role="region" aria-label="Danh sách món ăn tiêu biểu" tabindex="0">
+        <!-- Dish slides rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- DRAMATIC BỐC MÂM REVEAL SCENE + DINO QUẢNG NAM -->
+    <section class="boc-mam-section" id="choi-cung-gom" aria-labelledby="bocMamHeading" data-reveal>
+      <div class="container">
+        <div class="boc-mam-header">
+          <p class="section-eyebrow">Trải nghiệm giữa bàn · Bốc mâm</p>
+          <h2 class="section-title" id="bocMamHeading">Hôm nay đi mấy người, ăn mâm chi hè?</h2>
+          <p class="section-lead">Chọn số người rồi chạm <strong>Bày mâm</strong> — từng món sẽ lần lượt hiện ra quanh mặt bàn tối, vừa vặn cho một bữa quây tròn.</p>
+        </div>
+
+        <div class="boc-mam-controls">
+          <div class="party-picker" role="group" aria-label="Chọn số người">
+            <span class="party-label">Số người</span>
+            <div class="party-stepper">
+              <button type="button" class="stepper-btn" id="partyMinus" aria-label="Giảm số người">−</button>
+              <output class="party-value" id="partyValue" aria-live="polite">4 người</output>
+              <button type="button" class="stepper-btn" id="partyPlus" aria-label="Tăng số người">+</button>
+            </div>
+            <div class="party-presets" aria-label="Chọn nhanh số người">
+              <button type="button" class="preset-chip" data-party="2">2</button>
+              <button type="button" class="preset-chip is-active" data-party="4">4</button>
+              <button type="button" class="preset-chip" data-party="6">6</button>
+              <button type="button" class="preset-chip" data-party="10">10</button>
+              <button type="button" class="preset-chip" data-party="16">16</button>
+            </div>
+          </div>
+
+          <button type="button" class="gold-btn" id="bayMamBtn">
+            <span class="gold-btn-text">Bày mâm</span>
+          </button>
+        </div>
+
+        <!-- Dark Circular Table Stage -->
+        <div class="mam-layout">
+          <div class="mam-stage-wrap">
+            <div class="mam-table" id="mamTable" aria-live="polite">
+              <div class="mam-ring mam-ring--outer" aria-hidden="true"></div>
+              <div class="mam-ring mam-ring--inner" aria-hidden="true"></div>
+
+              <div class="mam-center" id="mamCenter">
+                <img src="../assets/gom-mark-small.webp" alt="" class="mam-center-mark" width="56" height="56">
+                <span class="mam-center-caption" id="mamCenterCaption">Chạm “Bày mâm”</span>
+              </div>
+
+              <div class="mam-orbit" id="mamOrbit">
+                <!-- Dishes fade in one by one in a circle -->
+              </div>
+            </div>
+          </div>
+
+          <aside class="mam-manifest" id="mamManifest" aria-live="polite">
+            <div class="mam-manifest-head">
+              <span class="meta-label">Gợi ý từ bếp GÔM</span>
+              <h3 class="mam-manifest-title" id="mamManifestTitle">Mâm tròn chờ lên món</h3>
+            </div>
+            <p class="mam-manifest-note" id="mamManifestNote">Bếp sẽ tự phối món địa phương, gỏi rau, hải sản hoặc thịt nướng, thêm nồi canh/lẩu và tráng miệng hợp số người.</p>
+            <ol class="mam-dish-list" id="mamDishList">
+              <!-- Populated when Bày mâm is clicked -->
+            </ol>
+            <div class="mam-manifest-footer">
+              <a href="#dat-ban" class="text-gold-link" id="mamBookLink">Giữ mâm này &amp; đặt bàn →</a>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Subtle Dino Quảng Nam Mini-Game Card -->
+        <div class="dino-strip" aria-labelledby="dinoHeading">
+          <div class="dino-card-visual">
+            <img src="../assets/dino-card.webp" alt="Chú Dino nói tiếng Quảng Nam" width="88" height="88" loading="lazy">
+          </div>
+          <div class="dino-body">
+            <p class="meta-label">Chơi cùng GÔM · Tiếng Quảng Nam</p>
+            <h3 class="dino-title" id="dinoHeading">Dino đố một từ giọng Quảng hè</h3>
+            <p class="dino-prompt" id="dinoPrompt">“Răng mà ngon dữ rứa hè?” — Từ <strong>“răng”</strong> nghĩa là chi?</p>
+            <div class="dino-options" id="dinoOptions" role="group" aria-label="Chọn đáp án">
+              <!-- Rendered by app.js -->
+            </div>
+            <p class="dino-feedback" id="dinoFeedback" aria-live="polite"></p>
+          </div>
+          <div class="dino-actions">
+            <button type="button" class="ghost-btn" id="dinoNextBtn">Câu khác</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT & BOOKING: Dark Section with Gold Hairlines -->
+    <section class="visit-section" id="ghe-gom" aria-labelledby="visitHeading" data-reveal>
+      <div class="container">
+        <div class="visit-grid">
+          <!-- Left: Visit Info + Map -->
+          <div class="visit-info">
+            <p class="section-eyebrow">Ghé GÔM · Đà Nẵng</p>
+            <h2 class="section-title" id="visitHeading">Gôm đủ người, mình gặp nhau hè!</h2>
+            <p class="visit-intro">Nằm ngay trung tâm Hải Châu, GÔM mở cửa từ sáng sớm đến tối muộn — ghé uống ly cà phê rang hay quây quần bữa cơm tối đều ấm áp.</p>
+
+            <dl class="visit-details">
+              <div class="visit-detail-row">
+                <dt>Địa chỉ</dt>
+                <dd>25 Lê Hồng Phong, Hải Châu, Đà Nẵng</dd>
+              </div>
+              <div class="visit-detail-row">
+                <dt>Giờ mở cửa</dt>
+                <dd>8AM – 10PM · Mở cửa mỗi ngày</dd>
+              </div>
+              <div class="visit-detail-row">
+                <dt>Hotline</dt>
+                <dd>Sắp cập nhật</dd>
+              </div>
+            </dl>
+
+            <figure class="visit-map">
+              <img src="../assets/gom-map-danang.svg" alt="Bản đồ minh họa vị trí nhà hàng GÔM tại 25 Lê Hồng Phong, Hải Châu, Đà Nẵng" loading="lazy">
+              <figcaption>25 Lê Hồng Phong · Gần sông Hàn &amp; trung tâm Hải Châu</figcaption>
+            </figure>
+          </div>
+
+          <!-- Right: Compact Booking Form -->
+          <div class="booking-panel" id="dat-ban">
+            <div class="booking-panel-head">
+              <p class="meta-label">Đặt bàn trước</p>
+              <h3 class="booking-title">Giữ sẵn một góc bàn ấm</h3>
+              <p class="booking-sub">Điền nhanh vài dòng, GÔM sẽ chuẩn bị bàn chu đáo đón bạn.</p>
+            </div>
+
+            <form class="booking-form" id="bookingForm" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="bookName">Họ và tên</label>
+                  <input id="bookName" name="name" type="text" required placeholder="VD: Minh Anh" autocomplete="name">
+                </div>
+                <div class="form-field">
+                  <label for="bookPhone">Số điện thoại</label>
+                  <input id="bookPhone" name="phone" type="tel" required placeholder="09xx xxx xxx" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-row form-row--three">
+                <div class="form-field">
+                  <label for="bookDate">Ngày ghé</label>
+                  <input id="bookDate" name="date" type="date" required>
+                </div>
+                <div class="form-field">
+                  <label for="bookTime">Khung giờ</label>
+                  <select id="bookTime" name="time" required>
+                    <option value="09:00">09:00 (Sáng)</option>
+                    <option value="11:30">11:30 (Trưa)</option>
+                    <option value="12:30">12:30 (Trưa)</option>
+                    <option value="18:00" selected>18:00 (Tối)</option>
+                    <option value="19:00">19:00 (Tối)</option>
+                    <option value="20:00">20:00 (Tối)</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="bookGuests">Số khách</label>
+                  <input id="bookGuests" name="guests" type="number" min="1" max="20" value="4" required>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="bookNote">Ghi chú (tùy chọn)</label>
+                <textarea id="bookNote" name="note" rows="3" placeholder="VD: Ngồi gần sân vườn, ít cay, hoặc ghi chú mâm vừa bốc..."></textarea>
+              </div>
+
+              <p class="form-error" id="bookingError" role="alert" aria-live="assertive"></p>
+
+              <button type="submit" class="gold-btn gold-btn--full">
+                <span class="gold-btn-text">Gửi lời hẹn đặt bàn</span>
+              </button>
+            </form>
+
+            <div class="booking-confirmation" id="bookingConfirmation" hidden aria-live="polite">
+              <img src="../assets/rooster-card.webp" alt="" class="confirmation-emblem" width="64" height="64">
+              <p class="meta-label">Đã nhận lời hẹn</p>
+              <h4 class="confirmation-title">GÔM đã giữ chỗ cho bạn hè!</h4>
+              <p class="confirmation-summary" id="confirmationSummary"></p>
+              <button type="button" class="ghost-btn" id="bookingResetBtn">Đặt thêm bàn khác</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Dark Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/gom-mark-small.webp" alt="Biểu tượng GÔM" width="44" height="44" loading="lazy">
+        <div>
+          <p class="footer-slogan">Gôm về bên nhau. Quây tròn bữa ăn vui.</p>
+          <p class="footer-meta">25 Lê Hồng Phong, Hải Châu, Đà Nẵng · 8AM – 10PM</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Liên kết chân trang">
+        <a href="#chuyen-gom">Chuyện GÔM</a>
+        <a href="#thuc-don">Thực đơn</a>
+        <a href="#choi-cung-gom">Chơi cùng GÔM</a>
+        <a href="#ghe-gom">Ghé GÔM</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Fixed Back-Link to Style Showcase -->
+  <a class="back-to-styles" href="../index.html">← Các phong cách</a>
+
+  <script src="app.js"></script>
+</body>
+</html>

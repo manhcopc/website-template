@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GÔM — Ẩm thực miền Trung | Editorial Frame Concept</title>
+  <meta
+    name="description"
+    content="GÔM — Một căn nhà ẩm thực miền Trung. Gôm về bên nhau, quây tròn bữa ăn vui."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- ================= FIXED TOP HEADER (4P's Scroll-Reactive Shell) ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#top" class="brand-lockup" aria-label="GÔM — Trang chủ">
+        <img
+          src="../assets/wordmark-header.webp"
+          alt="GÔM"
+          class="brand-wordmark"
+          width="112"
+          height="52"
+        />
+        <span class="brand-market">ĐÀ NẴNG</span>
+      </a>
+
+      <div class="header-right">
+        <nav class="utility-nav" aria-label="Tiện ích nhanh">
+          <button type="button" class="utility-link" data-open-booking>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="17" rx="2" />
+              <path d="M16 2v4M8 2v4M3 10h18" />
+            </svg>
+            <span data-i18n="navBooking">ĐẶT BÀN</span>
+          </button>
+          <a href="#thuc-don" class="utility-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="4" />
+            </svg>
+            <span data-i18n="navMenu">THỰC ĐƠN</span>
+          </a>
+          <a href="#choi-cung-gom" class="utility-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 3l2.6 5.3L20 9.1l-4 3.9.9 5.5L12 15.9 7.1 18.5 8 13l-4-3.9 5.4-.8L12 3z" />
+            </svg>
+            <span data-i18n="navGame">CHƠI CÙNG GÔM</span>
+          </a>
+        </nav>
+
+        <div class="lang-dropdown" id="langDropdown">
+          <button
+            type="button"
+            class="lang-trigger"
+            id="langTrigger"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+          >
+            <span id="langCurrent">VI</span>
+            <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M2.5 4.5L6 8l3.5-3.5" />
+            </svg>
+          </button>
+          <ul class="lang-menu" role="listbox" aria-label="Chọn ngôn ngữ">
+            <li><button type="button" data-lang="vi" class="is-active">VI — Tiếng Việt</button></li>
+            <li><button type="button" data-lang="en">EN — English</button></li>
+          </ul>
+        </div>
+
+        <button
+          type="button"
+          class="menu-circle-btn"
+          id="menuToggleBtn"
+          aria-expanded="false"
+          aria-controls="fullscreenDrawer"
+          aria-label="Mở menu điều hướng"
+        >
+          <span class="hamburger-lines" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= FULL-SCREEN NAVIGATION DRAWER ================= -->
+  <aside class="fullscreen-drawer" id="fullscreenDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-top">
+        <div class="drawer-region-wrap">
+          <button type="button" class="drawer-region-btn" id="drawerRegionBtn" aria-expanded="false">
+            <span id="drawerRegionLabel">Đà Nẵng</span>
+            <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M2 4.5L6 8.5L10 4.5" />
+            </svg>
+          </button>
+          <ul class="drawer-region-list" id="drawerRegionList">
+            <li><button type="button" data-drawer-region="Đà Nẵng · Lê Hồng Phong">Đà Nẵng · 25 Lê Hồng Phong</button></li>
+            <li><button type="button" data-drawer-region="Hội An · Phố Hội">Hội An · Cảm hứng Phố Hội</button></li>
+            <li><button type="button" data-drawer-region="Xứ Quảng · Quê Nhà">Xứ Quảng · Chuyện vùng đất</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="drawer-grid">
+        <div class="drawer-col drawer-col-primary">
+          <a href="#ghe-gom" class="drawer-serif-link" data-close-drawer>Ghé GÔM</a>
+          <a href="#thuc-don" class="drawer-serif-link" data-close-drawer>Thực đơn</a>
+          <a href="#chuyen-gom" class="drawer-serif-link" data-close-drawer>Chuyện GÔM</a>
+          <a href="#tinh-than" class="drawer-serif-link" data-close-drawer>Đậm · Tươi · Vui</a>
+          <a href="#mon-ngon" class="drawer-serif-link" data-close-drawer>Món ngon giữa bàn</a>
+        </div>
+        <div class="drawer-col drawer-col-primary">
+          <a href="#so-tay" class="drawer-serif-link" data-close-drawer>Sổ tay GÔM</a>
+          <a href="#choi-cung-gom" class="drawer-serif-link" data-close-drawer>Chơi cùng GÔM</a>
+          <a href="#vung-dat" class="drawer-serif-link" data-close-drawer>Từ Vùng Đất Đến Bàn Ăn</a>
+          <a href="#tin-vui" class="drawer-serif-link" data-close-drawer>Tin vui nhà GÔM</a>
+        </div>
+        <div class="drawer-col drawer-col-meta">
+          <div class="drawer-meta-links">
+            <button type="button" class="drawer-meta-btn" data-open-booking data-close-drawer>Đặt bàn trực tuyến</button>
+            <a href="#ghe-gom" data-close-drawer>25 Lê Hồng Phong, Hải Châu, Đà Nẵng</a>
+            <a href="#ghe-gom" data-close-drawer>Giờ mở cửa: 8AM – 10PM mỗi ngày</a>
+            <a href="#cong-dong" data-close-drawer>Không khí nhà GÔM</a>
+          </div>
+          <div class="drawer-social">
+            <p class="drawer-social-title">Gôm thêm chuyện vui!</p>
+            <div class="social-icons">
+              <a href="#cong-dong" aria-label="Instagram" data-close-drawer>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#cong-dong" aria-label="Facebook" data-close-drawer>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-3a4 4 0 00-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 011-1h2V3z"/></svg>
+              </a>
+              <a href="#cong-dong" aria-label="YouTube" data-close-drawer>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><polygon points="10,9.5 15.5,12 10,14.5" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#cong-dong" aria-label="TikTok" data-close-drawer>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4v10.5a3.5 3.5 0 11-2.5-3.35V4h2.5a5 5 0 005 5v2.5a7.5 7.5 0 01-5-2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main id="top">
+    <!-- ================= 1. HERO / FIRST VIEW (100vh Full-Bleed Video + Regions + WOW Counter) ================= -->
+    <section class="hero-fv" id="hero">
+      <div class="hero-media" aria-hidden="true">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="../assets/photos/gathering.webp"
+        >
+          <source src="../assets/photos/coffee-roasting.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-scrim"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-regions" role="tablist" aria-label="Vùng cảm hứng ẩm thực miền Trung">
+          <button type="button" class="region-item is-active" data-region="danang">Đà Nẵng</button>
+          <button type="button" class="region-item" data-region="hoian">Hội An</button>
+          <button type="button" class="region-item" data-region="quangnam">Xứ Quảng</button>
+          <button type="button" class="region-item" data-region="hue">Cố Đô Huế</button>
+          <button type="button" class="region-item" data-region="culao">Cù Lao Chàm</button>
+          <p class="hero-region-note" id="heroRegionNote">
+            25 Lê Hồng Phong · Một căn nhà ẩm thực miền Trung giữa lòng Đà Nẵng.
+          </p>
+        </div>
+
+        <!-- Floating GÔM!!! Split-Flap Counter Card (mirroring 4P's WOW!!! card) -->
+        <aside class="wow-card" aria-label="Bộ đếm những bữa ăn quây quần tại GÔM">
+          <div class="wow-head">
+            <span class="wow-title">GÔM!!!</span>
+            <span class="wow-since">Từ những mâm cơm quê〜</span>
+          </div>
+          <p class="wow-copy" data-i18n="wowCopy">
+            Mỗi lượt gắp món, mỗi chén nước chấm chuyền tay là thêm một niềm vui được gôm lại quanh bàn ăn miền Trung.
+          </p>
+          <a href="#chuyen-gom" class="wow-link" data-i18n="wowLink">Đọc chuyện GÔM</a>
+          <div class="flip-counter" id="flipCounter" aria-live="off" aria-label="1,284,619 đôi đũa đã gôm lại">
+            <!-- Populated by JS -->
+          </div>
+          <span class="wow-caption">đôi đũa đã gôm lại bên nhau</span>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= 2. MANIFESTO INTRO (Mirroring "Oneness") ================= -->
+    <section class="section-manifesto reveal" id="manifesto">
+      <div class="container-narrow">
+        <h1 class="manifesto-heading" data-i18n="manifestoTitle">
+          “Gôm” Về Bên Nhau, Quây Tròn Bữa Ăn Vui
+        </h1>
+        <p class="manifesto-sub" data-i18n="manifestoSub">
+          Một tiếng gọi mộc mạc của người miền Trung — có khách đến nhà thì thêm đôi đũa, có món ngon thì gắp cho nhau miếng đầu tiên.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 3. INTERACTIVE EDITORIAL FLIPBOOK (Mirroring "Journal for Peace") ================= -->
+    <section class="section-flipbook reveal" id="so-tay">
+      <div class="flipbook-bg-motif" aria-hidden="true">
+        <svg viewBox="0 0 1200 540" fill="none" preserveAspectRatio="xMidYMid slice">
+          <g stroke="currentColor" stroke-width="1" opacity="0.16">
+            <circle cx="190" cy="270" r="170" stroke-dasharray="3 6" />
+            <circle cx="190" cy="270" r="115" />
+            <circle cx="1010" cy="260" r="190" stroke-dasharray="4 7" />
+            <circle cx="1010" cy="260" r="130" />
+            <path d="M0 90 Q 300 40, 600 90 T 1200 90" stroke-dasharray="2 5" />
+            <path d="M0 460 Q 300 500, 600 460 T 1200 460" stroke-dasharray="2 5" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="flipbook-stage" id="flipbookStage">
+        <div class="booklet-viewport" id="bookletViewport">
+          <button type="button" class="book-arrow book-prev" id="bookPrev" aria-label="Trang trước">‹</button>
+          <article class="booklet-spread" id="bookletSpread" aria-live="polite">
+            <!-- Rendered by app.js -->
+          </article>
+          <button type="button" class="book-arrow book-next" id="bookNext" aria-label="Trang sau">›</button>
+        </div>
+
+        <!-- Floating Warm-Parchment Pill Toolbar (4P's signature flipbook control bar) -->
+        <div class="booklet-toolbar" role="toolbar" aria-label="Điều khiển Sổ tay GÔM">
+          <button type="button" id="tbPrev" title="Trang trước" aria-label="Trang trước">←</button>
+          <span class="tb-page" id="tbPage">1 / 6</span>
+          <button type="button" id="tbNext" title="Trang sau" aria-label="Trang sau">→</button>
+          <span class="tb-sep" aria-hidden="true"></span>
+          <button type="button" id="tbZoomOut" title="Thu nhỏ" aria-label="Thu nhỏ">−</button>
+          <button type="button" id="tbZoomIn" title="Phóng to" aria-label="Phóng to">+</button>
+          <button type="button" id="tbFullscreen" title="Toàn màn hình" aria-label="Toàn màn hình">⛶</button>
+          <button type="button" id="tbShare" title="Sao chép liên kết" aria-label="Sao chép liên kết">↗</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. GHÉ GÔM & THỰC ĐƠN 50/50 SPLIT ================= -->
+    <section class="section-split-50" aria-label="Ghé GÔM và Thực đơn">
+      <!-- Left 50%: Deep Lacquer Red (Mirroring 4P's Navy Location Panel) -->
+      <div class="split-panel split-location" id="ghe-gom">
+        <div class="split-inner">
+          <h2 class="split-title light">Ghé GÔM</h2>
+
+          <div class="loc-tabs" role="tablist" aria-label="Khu vực GÔM">
+            <button type="button" class="loc-tab is-active" data-loc="danang">Đà Nẵng</button>
+            <button type="button" class="loc-tab" data-loc="hoian">Hội An</button>
+            <button type="button" class="loc-tab" data-loc="quangnam">Xứ Quảng</button>
+          </div>
+
+          <div class="loc-select-wrap" id="locSelectWrap">
+            <button type="button" class="loc-select-trigger" id="locSelectTrigger" aria-expanded="false">
+              <span id="locSelectLabel">Chọn góc ngồi tại GÔM</span>
+              <svg viewBox="0 0 12 12" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M2 4.5L6 8.5L10 4.5" />
+              </svg>
+            </button>
+            <ul class="loc-select-list" id="locSelectList">
+              <!-- Populated by app.js based on active tab -->
+            </ul>
+          </div>
+
+          <div class="loc-photo-box">
+            <img src="../assets/photos/garden.webp" alt="Không gian xanh mát cảm hứng nhà GÔM" loading="lazy" />
+            <div class="loc-photo-overlay">
+              <p class="loc-address" id="locAddressText">25 Lê Hồng Phong, Hải Châu, Đà Nẵng · 8AM – 10PM</p>
+              <button type="button" class="loc-underlink" data-open-booking>ĐẶT BÀN &amp; CHỈ ĐƯỜNG</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 50%: Warm Parchment (Mirroring 4P's Beige Menu Panel) -->
+      <div class="split-panel split-menu" id="thuc-don">
+        <div class="split-inner">
+          <h2 class="split-title dark">Thực đơn</h2>
+          <p class="menu-sub">44 món miền Trung — từ bánh xèo hàu phô mai, mì Quảng Phú Chiêm đến lẩu Cù Lao Chàm.</p>
+          <div class="menu-photo-box">
+            <img src="../assets/photos/gathering.webp" alt="Mâm món ngon miền Trung đặt giữa bàn tại GÔM" loading="lazy" />
+            <a href="#mon-ngon" class="oval-btn oval-cream-solid menu-float-cta">
+              XEM<br />THỰC ĐƠN
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. CHUYỆN NHÀ GÔM (Mirroring Library 4P's with 1px Vertical Hairlines) ================= -->
+    <section class="section-library reveal" id="chuyen-gom">
+      <div class="library-grid">
+        <div class="library-intro">
+          <h2 class="section-serif-heading">
+            Chuyện<br />nhà GÔM
+          </h2>
+          <p class="library-lead">
+            Gôm người. Gôm món. Gôm chuyện. Gôm niềm vui từ những bữa cơm quê miền Trung.
+          </p>
+          <a href="#so-tay" class="oval-btn oval-outline-dark">
+            ĐỌC<br />SỔ TAY
+          </a>
+        </div>
+
+        <div class="library-cards">
+          <article class="lib-card">
+            <div class="lib-thumb">
+              <span class="lib-tag">TIẾNG GỌI</span>
+              <img src="../assets/photos/01-89190164.webp" alt="Một tiếng gọi thân thương" loading="lazy" />
+            </div>
+            <h3>MỘT TIẾNG GỌI THÂN THƯƠNG CỦA NGƯỜI MIỀN TRUNG</h3>
+          </article>
+
+          <article class="lib-card is-tinted">
+            <div class="lib-thumb">
+              <span class="lib-tag">NGUYÊN LIỆU</span>
+              <img src="../assets/photos/02-9bab64b8.webp" alt="Từ vùng đất đến bàn ăn" loading="lazy" />
+            </div>
+            <h3>TỪ VÙNG ĐẤT ĐẾN BÀN ĂN: HẢI SẢN CỬA ĐẠI &amp; RAU TRÀ QUẾ</h3>
+          </article>
+
+          <article class="lib-card">
+            <div class="lib-thumb">
+              <span class="lib-tag">HƯƠNG VỊ</span>
+              <img src="../assets/photos/03-334c5fa3.webp" alt="Cách cuốn cách chấm" loading="lazy" />
+            </div>
+            <h3>ĐẬM KHÔNG CHỈ LÀ VỊ — MÀ LÀ CÁCH CUỐN, CÁCH CHẤM</h3>
+          </article>
+
+          <article class="lib-card">
+            <div class="lib-thumb">
+              <span class="lib-tag">KHÔNG GIAN</span>
+              <img src="../assets/photos/04-2a7e82be.webp" alt="Không gian mát lành" loading="lazy" />
+            </div>
+            <h3>MỘT NƠI MÁT LÀNH ĐỂ GHÉ CHƠI VÀ NGỒI LÂU HƠN</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. FULL-BLEED ATMOSPHERIC BANNER (Mirroring Sustainability Report) ================= -->
+    <section class="section-report reveal" id="vung-dat">
+      <img
+        src="../assets/photos/coffee-together.webp"
+        alt="Khoảnh khắc ngồi lại cùng nhau"
+        class="report-bg"
+        loading="lazy"
+      />
+      <div class="report-scrim" aria-hidden="true"></div>
+      <div class="report-content">
+        <div class="report-headline-wrap">
+          <h2 class="report-title">
+            Từ Vùng Đất<br />
+            <span class="report-line-cta">
+              Đến Bàn Ăn
+              <a href="#mon-ngon" class="oval-btn oval-cream-solid report-oval">
+                KHÁM<br />PHÁ
+              </a>
+            </span>
+          </h2>
+        </div>
+        <p class="report-statement">
+          Mỗi sản vật miền Trung mang theo một câu chuyện về vùng đất, để khi đặt giữa bàn ăn, khoảng cách giữa mọi người cũng dần gần lại.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 7. SNS / GÓC CỘNG ĐỒNG (3×3 IG + 3 YT + 3 FB Split Cards) ================= -->
+    <section class="section-sns reveal" id="cong-dong">
+      <div class="sns-upper">
+        <div class="sns-ig">
+          <a href="#top" class="sns-link-head">Theo dõi Instagram <span>↗</span></a>
+          <div class="ig-grid">
+            <figure><img src="../assets/photos/05-32dbd512.webp" alt="Khoảnh khắc nhà GÔM 1" loading="lazy" /></figure>
+            <figure><img src="../assets/photos/06-5f1128a8.webp" alt="Khoảnh khắc nhà GÔM 2" loading="lazy" /></figure>
+            <figure><img src="../assets/photos/07-1d4629ee.webp" alt="Khoảnh khắc nhà GÔM 3" loading="lazy" /></figure>
+            <figure><img src="../assets/photos/08-0a63984a.webp" alt="Khoảnh khắc nhà GÔM 4" loading="lazy" /></figure>
+            <figure><img src="../assets/photos/09-adbfae09.webp" alt="Khoảnh khắc nhà GÔM 5" loading="lazy" /></figure>
+            <figure><img src="../assets/photos/10-84a74a59.webp" alt="Khoảnh khắc nhà GÔM 6" loading="lazy" /></figure>
+            <figure><img src="../assets/photos/11-befb66be.webp" alt="Khoảnh khắc nhà GÔM 7" loading="lazy" /></figure>
+            <figure><img src="../assets/photos/12-88af7984.webp" alt="Khoảnh khắc nhà GÔM 8" loading="lazy" /></figure>
+            <figure><img src="../assets/photos/drinks.webp" alt="Khoảnh khắc nhà GÔM 9" loading="lazy" /></figure>
+          </div>
+        </div>
+
+        <div class="sns-yt">
+          <a href="#top" class="sns-link-head">Xem video nhà GÔM <span>↗</span></a>
+          <div class="yt-stack">
+            <a href="#so-tay" class="yt-card">
+              <img src="../assets/photos/coffee-roasting-poster.jpg" alt="Một buổi chiều thân quen tại GÔM" loading="lazy" />
+              <span class="yt-play" aria-hidden="true">▶</span>
+              <span class="yt-caption">Chậm lại, ngồi gần nhau</span>
+            </a>
+            <a href="#thuc-don" class="yt-card">
+              <img src="../assets/photos/gathering.webp" alt="Quây tròn bên mâm cơm miền Trung" loading="lazy" />
+              <span class="yt-play" aria-hidden="true">▶</span>
+              <span class="yt-caption">Món ngon đặt giữa bàn</span>
+            </a>
+            <a href="#ghe-gom" class="yt-card">
+              <img src="../assets/photos/garden.webp" alt="Không gian xanh mát" loading="lazy" />
+              <span class="yt-play" aria-hidden="true">▶</span>
+              <span class="yt-caption">Lối vào khu vườn GÔM</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sns-fb">
+        <a href="#top" class="sns-link-head">Ghé Facebook GÔM <span>↗</span></a>
+        <div class="fb-grid">
+          <article class="fb-card">
+            <img src="../assets/photos/01-89190164.webp" alt="Bài viết Facebook GÔM 1" loading="lazy" />
+            <div class="fb-body">
+              <time>24.11.2026</time>
+              <p>Chiều Đà Nẵng mát trời, gôm hội bạn làm một mâm bánh xèo hàu phô mai cuốn rau cải con, thêm bình trà sâm dứa thơm lừng là hết sẩy hè!</p>
+            </div>
+          </article>
+          <article class="fb-card">
+            <img src="../assets/photos/03-334c5fa3.webp" alt="Bài viết Facebook GÔM 2" loading="lazy" />
+            <div class="fb-body">
+              <time>20.11.2026</time>
+              <p>Hôm nay đi 4 người chưa biết ăn chi? Ghé bàn xoay bốc mâm của GÔM, quay một vòng là có ngay gợi ý đủ món mặn – gỏi – canh – cơm niêu.</p>
+            </div>
+          </article>
+          <article class="fb-card">
+            <img src="../assets/photos/06-5f1128a8.webp" alt="Bài viết Facebook GÔM 3" loading="lazy" />
+            <div class="fb-body">
+              <time>16.11.2026</time>
+              <p>“Đất Quảng Nam chưa mưa đã thấm, Rượu Hồng Đào chưa nhấm đã say” — GÔM giữ hồn miền Trung, kể lại theo cách thật vui của hôm nay.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. TINH THẦN GÔM ACCENT BAND (Mirroring 4P's Terracotta Vision Band) ================= -->
+    <section class="section-vision reveal" id="tinh-than">
+      <div class="vision-inner">
+        <div class="vision-copy">
+          <span class="vision-eyebrow">TINH THẦN BỮA ĂN GÔM</span>
+          <h2 class="vision-title">Đậm Hương Vị · Tươi Nguyên Liệu · Vui Trải Nghiệm</h2>
+        </div>
+        <a href="#so-tay" class="oval-btn oval-lacquer-solid">
+          XEM<br />THÊM
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= 9. CHƠI CÙNG GÔM SPLIT BANNER (Mirroring 4P's 63/37 Join Us!) ================= -->
+    <section class="section-joinus reveal" id="choi-cung-gom">
+      <div class="join-visual">
+        <img src="../assets/photos/drinks.webp" alt="Không khí vui vẻ cùng bạn bè tại GÔM" loading="lazy" />
+        <div class="join-rooster-badge">
+          <img src="../assets/rooster-card.webp" alt="Gà Đông Hồ GÔM" width="76" height="76" loading="lazy" />
+          <div>
+            <span>TẤM VÉ HỘI LÀNG</span>
+            <strong>Dino Nói Từ Giọng Quảng</strong>
+          </div>
+        </div>
+      </div>
+      <div class="join-panel">
+        <h2 class="join-title">Chơi cùng GÔM!</h2>
+        <p class="join-copy">
+          Trong lúc chờ món lên bàn, thử tài đọc từ giọng Quảng Nam cùng Dino hoặc quay bàn bốc mâm ngẫu nhiên cho cả hội hôm nay.
+        </p>
+        <button type="button" class="oval-btn oval-outline-light" data-open-booking>
+          HẸN GẶP<br />Ở GÔM
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= 10. MÓN NGON ĐẶT GIỮA BÀN (Mirroring Original Products 4-Card Row) ================= -->
+    <section class="section-products reveal" id="mon-ngon">
+      <div class="products-head">
+        <h2 class="section-serif-heading">
+          Món Ngon<br />Đặt Giữa Bàn
+        </h2>
+        <p class="products-desc">
+          GÔM gom góp những hương vị đặc trưng của phố Hội, xứ Quảng và biển miền Trung — từ món cuốn giòn rụm đến nồi cơm niêu nóng hổi để cả bàn cùng sẻ chia.
+        </p>
+      </div>
+
+      <div class="products-row">
+        <article class="product-card">
+          <div class="product-art">
+            <img src="../assets/dishes/banh-xeo-hau-pho-mai.webp" alt="Bánh xèo hàu phô mai" loading="lazy" />
+          </div>
+          <h3>Bánh xèo hàu phô mai</h3>
+          <p>Đĩa chia sẻ · Độc quyền tại GÔM</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art">
+            <img src="../assets/dishes/mi-quang-phu-chiem.webp" alt="Mì Quảng Phú Chiêm" loading="lazy" />
+          </div>
+          <h3>Mì Quảng Phú Chiêm</h3>
+          <p>Tôm rim, thịt ba chỉ &amp; bánh đa nướng</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art">
+            <img src="../assets/dishes/com-chien-dua-hai-san.webp" alt="Cơm chiên trái dứa hải sản" loading="lazy" />
+          </div>
+          <h3>Cơm chiên trái dứa hải sản</h3>
+          <p>Tôm mực tươi, hạt điều &amp; dứa chín</p>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art">
+            <img src="../assets/dishes/ruou-hong-dao.webp" alt="Rượu Hồng Đào đất Quảng" loading="lazy" />
+          </div>
+          <h3>Rượu Hồng Đào đất Quảng</h3>
+          <p>Chum sành · Ủ men lá &amp; đào tiên</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= 11. TIN VUI NHÀ GÔM (Mirroring News 4×3 Matrix + 12th Slot Oval CTA) ================= -->
+    <section class="section-news reveal" id="tin-vui">
+      <h2 class="news-heading">Tin vui nhà GÔM</h2>
+
+      <div class="news-grid">
+        <a href="#mon-ngon" class="news-item">
+          <img src="../assets/dishes/banh-xeo-hau-pho-mai.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.11.24</time>
+            <h3>RA MẮT MÓN BÁNH XÈO HÀU PHÔ MAI PHIÊN BẢN GÔM</h3>
+          </div>
+        </a>
+        <a href="#thuc-don" class="news-item">
+          <img src="../assets/dishes/cao-lau-hoi-an.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.11.21</time>
+            <h3>TÍNH NĂNG BỐC MÂM NGẪU NHIÊN CHO BÀN 1–20 NGƯỜI</h3>
+          </div>
+        </a>
+        <a href="#choi-cung-gom" class="news-item">
+          <img src="../assets/rooster-card.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.11.18</time>
+            <h3>CHƠI DINO NÓI TỪ GIỌNG QUẢNG NAM NGAY TRÊN WEB</h3>
+          </div>
+        </a>
+        <a href="#ghe-gom" class="news-item">
+          <img src="../assets/photos/garden.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.11.15</time>
+            <h3>KHÔNG GIAN SÂN VƯỜN MÁT LÀNH TẠI 25 LÊ HỒNG PHONG</h3>
+          </div>
+        </a>
+        <a href="#mon-ngon" class="news-item">
+          <img src="../assets/dishes/che-sen-dua-nuoc.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.11.12</time>
+            <h3>CHÈ HẠT SEN DỪA NƯỚC CẨM THANH THANH MÁT CUỐI BỮA</h3>
+          </div>
+        </a>
+        <a href="#vung-dat" class="news-item">
+          <img src="../assets/photos/02-9bab64b8.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.11.09</time>
+            <h3>HÀNH TRÌNH TÌM NGUYÊN LIỆU TƯƠI TỪ BIỂN CỬA ĐẠI</h3>
+          </div>
+        </a>
+        <a href="#mon-ngon" class="news-item">
+          <img src="../assets/dishes/mi-quang-phu-chiem.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.11.06</time>
+            <h3>SỢI MÌ QUẢNG TRÁNG TAY LÀNG NGHỀ PHÚ CHIÊM</h3>
+          </div>
+        </a>
+        <a href="#chuyen-gom" class="news-item">
+          <img src="../assets/photos/04-2a7e82be.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.11.03</time>
+            <h3>VÌ SAO CHÚNG MÌNH GỌI NHAU BẰNG MỘT TIẾNG “GÔM”?</h3>
+          </div>
+        </a>
+        <a href="#mon-ngon" class="news-item">
+          <img src="../assets/dishes/ruou-hong-dao.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.10.29</time>
+            <h3>CHUM RƯỢU HỒNG ĐÀO CHO NHỮNG BÀN TIỆC XÔM TỤ</h3>
+          </div>
+        </a>
+        <a href="#mon-ngon" class="news-item">
+          <img src="../assets/dishes/com-chien-dua-hai-san.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.10.25</time>
+            <h3>GỢI Ý MÂM GIA ĐÌNH ĐỦ VỊ CHO DỊP CUỐI TUẦN</h3>
+          </div>
+        </a>
+        <a href="#ghe-gom" class="news-item">
+          <img src="../assets/photos/gathering.webp" alt="" loading="lazy" />
+          <div>
+            <time>2026.10.20</time>
+            <h3>MỞ CỬA ĐÓN KHÁCH TỪ 8AM – 10PM MỖI NGÀY</h3>
+          </div>
+        </a>
+
+        <!-- 12th slot: Solid Lacquer Oval CTA (mirroring 4P's VIEW NEWS oval) -->
+        <div class="news-cta-slot">
+          <button type="button" class="oval-btn oval-lacquer-solid" data-open-booking>
+            ĐẶT BÀN<br />NGAY
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= MOBILE PRE-FOOTER JUMP BAR ================= -->
+  <nav class="mobile-jump-bar" aria-label="Đi nhanh tới mục">
+    <div class="jump-links">
+      <a href="#ghe-gom">Ghé GÔM</a>
+      <a href="#thuc-don">Thực đơn</a>
+      <a href="#chuyen-gom">Chuyện GÔM</a>
+      <a href="#cong-dong">Cộng đồng</a>
+      <a href="#tin-vui">Tin vui</a>
+    </div>
+    <a href="#top" class="jump-top">↑ LÊN ĐẦU</a>
+  </nav>
+
+  <!-- ================= EDITORIAL FOOTER (1px Top Border, 3 Regions + Bottom Bar) ================= -->
+  <footer class="site-footer">
+    <div class="footer-upper">
+      <div class="footer-emblem">
+        <img src="../assets/gom-mark-small.webp" alt="Biểu tượng GÔM" width="76" height="76" loading="lazy" />
+        <p class="footer-motto">Gôm về bên nhau.<br /><em>Quây tròn bữa ăn vui.</em></p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#chuyen-gom">Chuyện GÔM</a></li>
+        <li><a href="#thuc-don">Thực đơn 44 món</a></li>
+        <li><a href="#choi-cung-gom">Chơi cùng GÔM</a></li>
+        <li><button type="button" class="footer-link-btn" data-open-booking>Đặt bàn tại GÔM</button></li>
+      </ul>
+
+      <div class="footer-social">
+        <p class="footer-social-label">Gôm thêm chuyện vui!</p>
+        <div class="social-icons">
+          <a href="#cong-dong" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#cong-dong" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-3a4 4 0 00-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 011-1h2V3z"/></svg>
+          </a>
+          <a href="#cong-dong" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><polygon points="10,9.5 15.5,12 10,14.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#cong-dong" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4v10.5a3.5 3.5 0 11-2.5-3.35V4h2.5a5 5 0 005 5v2.5a7.5 7.5 0 01-5-2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-contacts">
+        <span><strong>Địa chỉ</strong> 25 Lê Hồng Phong, Hải Châu, Đà Nẵng</span>
+        <span><strong>Giờ mở cửa</strong> 8AM – 10PM mỗi ngày</span>
+      </div>
+      <p class="footer-copy">© 2026 GÔM — Ẩm thực miền Trung</p>
+    </div>
+  </footer>
+
+  <!-- ================= MOBILE PERSISTENT 3-COLUMN STICKY BOTTOM ACTION BAR ================= -->
+  <div class="mobile-sticky-bar" role="region" aria-label="Hành động nhanh">
+    <button type="button" data-open-booking>ĐẶT BÀN</button>
+    <a href="#thuc-don">THỰC ĐƠN</a>
+    <a href="#choi-cung-gom">CHƠI CÙNG GÔM</a>
+  </div>
+
+  <!-- ================= QUICK BOOKING MODAL (GÔM Tone of Voice) ================= -->
+  <dialog class="booking-modal" id="bookingModal" aria-labelledby="bookingModalTitle">
+    <div class="booking-modal-inner">
+      <div class="booking-head">
+        <div>
+          <p class="booking-eyebrow">ĐẶT BÀN TẠI GÔM</p>
+          <h2 id="bookingModalTitle">Giữ một chỗ ngồi thật vui.</h2>
+        </div>
+        <button type="button" class="booking-close" id="bookingCloseBtn" aria-label="Đóng khung đặt bàn">×</button>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+        <div class="form-row">
+          <label>
+            <span>Họ và tên</span>
+            <input type="text" name="name" required placeholder="Ví dụ: Anh Minh / Chị Lan" />
+          </label>
+          <label>
+            <span>Số điện thoại (Zalo / gọi xác nhận)</span>
+            <input type="tel" name="phone" required placeholder="09xx xxx xxx" />
+          </label>
+        </div>
+        <div class="form-row form-row-3">
+          <label>
+            <span>Ngày đến</span>
+            <input type="date" name="date" required id="bookingDate" />
+          </label>
+          <label>
+            <span>Giờ đến</span>
+            <select name="time">
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="18:00" selected>18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+          </label>
+          <label>
+            <span>Số khách</span>
+            <input type="number" name="guests" min="1" max="20" value="4" />
+          </label>
+        </div>
+        <label>
+          <span>Ghi chú thêm</span>
+          <input type="text" name="notes" placeholder="Ghế trẻ em, bàn sân vườn, tiệc sinh nhật..." />
+        </label>
+        <div class="booking-actions">
+          <button type="submit" class="oval-btn oval-lacquer-solid booking-submit">ĐẶT BÀN<br />NGAY</button>
+          <p class="booking-hint">Lễ tân GÔM sẽ gọi lại xác nhận trong ít phút.</p>
+        </div>
+      </form>
+
+      <div class="booking-success" id="bookingSuccess" hidden>
+        <p class="booking-eyebrow">ĐÃ GỬI YÊU CẦU</p>
+        <h3>GÔM đã giữ lời hẹn rồi hè!</h3>
+        <p id="bookingSummaryText"></p>
+        <button type="button" class="oval-btn oval-outline-dark" id="bookingResetBtn">ĐẶT THÊM<br />BÀN KHÁC</button>
+      </div>
+    </div>
+  </dialog>
+
+  <a href="../index.html" class="styles-back-link">← Các phong cách</a>
+  <script src="./app.js"></script>
+</body>
+</html>

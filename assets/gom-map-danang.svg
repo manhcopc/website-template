@@ -1,0 +1,436 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img" aria-label="Bản đồ GÔM — 25 Lê Hồng Phong, Hải Châu, Đà Nẵng">
+  <defs>
+    <!-- Warm aged parchment background -->
+    <radialGradient id="paperBg" cx="48%" cy="46%" r="68%">
+      <stop offset="0%" stop-color="#f7ecd6" />
+      <stop offset="68%" stop-color="#efe0c2" />
+      <stop offset="100%" stop-color="#e3cea8" />
+    </radialGradient>
+
+    <!-- Soft muted Han River gradient -->
+    <linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cfd6cc" />
+      <stop offset="55%" stop-color="#c0cbc2" />
+      <stop offset="100%" stop-color="#cbd3ca" />
+    </linearGradient>
+
+    <!-- Subtle woven paper grid -->
+    <pattern id="paperGrain" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#b99768" stroke-width="0.35" opacity="0.16" />
+    </pattern>
+
+    <!-- Pin shadow -->
+    <filter id="pinShadow" x="-40%" y="-30%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#3b0b11" flood-opacity="0.38" />
+    </filter>
+
+    <!-- Plaque shadow -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4.5" flood-color="#3b0b11" flood-opacity="0.24" />
+    </filter>
+
+    <!-- Subtle roof shadow -->
+    <filter id="roofShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="2.5" stdDeviation="1.2" flood-color="#5a3622" flood-opacity="0.22" />
+    </filter>
+  </defs>
+
+  <!-- Base parchment -->
+  <rect width="1200" height="620" fill="url(#paperBg)" />
+  <rect width="1200" height="620" fill="url(#paperGrain)" />
+
+  <!-- =================================================================== -->
+  <!-- ARCHITECTURAL BUILDINGS & COURTYARDS INSIDE LAND PARCELS            -->
+  <!-- =================================================================== -->
+  <g filter="url(#roofShadow)">
+    <!-- Block: Top-left (west of Hoàng Diệu) -->
+    <g>
+      <polygon points="22,82 72,72 80,104 30,114" fill="#d9ba86" stroke="#9d7348" stroke-width="0.8" />
+      <polygon points="88,68 152,55 162,92 98,105" fill="#c47254" stroke="#85422e" stroke-width="0.8" />
+      <line x1="93" y1="86" x2="157" y2="73" stroke="#e9c7a8" stroke-width="0.8" opacity="0.55" />
+      <polygon points="172,50 226,38 236,72 182,84" fill="#e2c899" stroke="#a37c52" stroke-width="0.8" />
+      <polygon points="18,128 74,118 82,148 26,158" fill="#cfa66f" stroke="#946c42" stroke-width="0.8" />
+      <polygon points="94,114 146,104 152,132 100,142" fill="#b45a44" stroke="#7a3526" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Top center-left (Trần Quốc Toản — Thái Phiên, between Phan Châu Trinh & Nguyễn Chí Thanh) -->
+    <g>
+      <rect x="330" y="34" width="44" height="30" rx="2" fill="#c97a58" stroke="#85452e" stroke-width="0.8" />
+      <line x1="330" y1="49" x2="374" y2="49" stroke="#f0d3b6" stroke-width="0.8" opacity="0.55" />
+      <rect x="382" y="36" width="38" height="28" rx="2" fill="#dec290" stroke="#9e764a" stroke-width="0.8" />
+      <rect x="325" y="74" width="52" height="36" rx="2" fill="#e2ca9c" stroke="#a27b50" stroke-width="0.8" />
+      <rect x="384" y="76" width="34" height="34" rx="2" fill="#b55d46" stroke="#783526" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Top center (between x=440 and Yên Bái x=730) -->
+    <g>
+      <rect x="462" y="34" width="54" height="34" rx="2" fill="#d9b984" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="524" y="36" width="46" height="32" rx="2" fill="#bd644a" stroke="#7c3828" stroke-width="0.8" />
+      <line x1="524" y1="52" x2="570" y2="52" stroke="#ebd0b5" stroke-width="0.8" opacity="0.55" />
+      <rect x="614" y="38" width="52" height="34" rx="2" fill="#e3ca9b" stroke="#9e764b" stroke-width="0.8" />
+      <rect x="674" y="40" width="42" height="32" rx="2" fill="#c97a59" stroke="#85452e" stroke-width="0.8" />
+
+      <rect x="458" y="80" width="42" height="40" rx="2" fill="#c77654" stroke="#85442d" stroke-width="0.8" />
+      <rect x="508" y="84" width="58" height="36" rx="2" fill="#e5cea3" stroke="#a27d52" stroke-width="0.8" />
+      <rect x="612" y="84" width="46" height="42" rx="2" fill="#d6b37c" stroke="#986f45" stroke-width="0.8" />
+      <rect x="666" y="86" width="48" height="40" rx="2" fill="#a8503c" stroke="#6f2f22" stroke-width="0.8" />
+      <line x1="666" y1="106" x2="714" y2="106" stroke="#e8c8ad" stroke-width="0.8" opacity="0.5" />
+    </g>
+
+    <!-- Block: Top right (Yên Bái — Trần Phú & Trần Phú — Bạch Đằng) -->
+    <g>
+      <rect x="760" y="42" width="56" height="36" rx="2" fill="#d9b984" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="862" y="46" width="64" height="38" rx="2" fill="#c36b4e" stroke="#823e2a" stroke-width="0.8" />
+      <rect x="756" y="90" width="66" height="44" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+      <rect x="858" y="96" width="68" height="42" rx="2" fill="#d4b17b" stroke="#966e44" stroke-width="0.8" />
+
+      <rect x="984" y="52" width="62" height="38" rx="2" fill="#c46d50" stroke="#813e2a" stroke-width="0.8" />
+      <rect x="976" y="102" width="76" height="42" rx="2" fill="#e2c99a" stroke="#9f784d" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Mid-upper left (Hoàng Diệu — Phan Châu Trinh, Thái Phiên — Lê Hồng Phong) -->
+    <g>
+      <polygon points="154,158 214,142 224,182 164,198" fill="#c77454" stroke="#84422c" stroke-width="0.8" />
+      <polygon points="108,198 164,186 172,222 116,234" fill="#e0c594" stroke="#9c754a" stroke-width="0.8" />
+      <rect x="192" y="190" width="64" height="38" rx="2" fill="#d6b37d" stroke="#987046" stroke-width="0.8" />
+      <rect x="18" y="182" width="58" height="34" rx="2" fill="#d9b985" stroke="#9a7248" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Mid-upper center-left (Phan Châu Trinh — Nguyễn Chí Thanh, Thái Phiên — Lê Hồng Phong) -->
+    <g>
+      <rect x="308" y="148" width="46" height="36" rx="2" fill="#e2ca9c" stroke="#9f784e" stroke-width="0.8" />
+      <rect x="362" y="150" width="44" height="34" rx="2" fill="#b85f47" stroke="#7a3627" stroke-width="0.8" />
+      <rect x="302" y="196" width="52" height="40" rx="2" fill="#d3b079" stroke="#946c42" stroke-width="0.8" />
+      <rect x="362" y="196" width="38" height="42" rx="2" fill="#c97a58" stroke="#85452e" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Mid-upper center (above GÔM pin, Thái Phiên — Lê Hồng Phong) -->
+    <g>
+      <rect x="442" y="154" width="48" height="38" rx="2" fill="#d9b984" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="526" y="158" width="54" height="40" rx="2" fill="#c67252" stroke="#84402b" stroke-width="0.8" />
+      <line x1="526" y1="178" x2="580" y2="178" stroke="#efd2b6" stroke-width="0.8" opacity="0.55" />
+      <rect x="590" y="160" width="48" height="38" rx="2" fill="#e4cc9f" stroke="#a27c51" stroke-width="0.8" />
+      <rect x="646" y="162" width="56" height="38" rx="2" fill="#d4b17b" stroke="#966e44" stroke-width="0.8" />
+
+      <rect x="434" y="210" width="58" height="32" rx="2" fill="#e4cc9e" stroke="#a27c51" stroke-width="0.8" />
+      <rect x="504" y="212" width="46" height="34" rx="2" fill="#b35943" stroke="#763324" stroke-width="0.8" />
+      <rect x="634" y="214" width="66" height="38" rx="2" fill="#c87857" stroke="#85442d" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Mid-upper right (Yên Bái — Trần Phú & Trần Phú — Bạch Đằng) -->
+    <g>
+      <rect x="748" y="170" width="60" height="42" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+      <rect x="850" y="174" width="70" height="42" rx="2" fill="#c0674b" stroke="#7f3b28" stroke-width="0.8" />
+      <line x1="850" y1="195" x2="920" y2="195" stroke="#ecd0b5" stroke-width="0.8" opacity="0.55" />
+      <rect x="742" y="224" width="68" height="38" rx="2" fill="#d5b37c" stroke="#976f45" stroke-width="0.8" />
+      <rect x="822" y="226" width="90" height="38" rx="2" fill="#e4cc9e" stroke="#a17b50" stroke-width="0.8" />
+
+      <rect x="964" y="178" width="76" height="40" rx="2" fill="#d8b782" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="958" y="230" width="78" height="38" rx="2" fill="#b85f47" stroke="#7a3627" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Mid-lower left (Lê Hồng Phong — Hoàng Văn Thụ, west of Phan Châu Trinh) -->
+    <g>
+      <polygon points="36,266 104,254 112,292 44,304" fill="#d9b985" stroke="#9a7248" stroke-width="0.8" />
+      <rect x="172" y="266" width="68" height="38" rx="2" fill="#c57051" stroke="#833f2b" stroke-width="0.8" />
+      <rect x="150" y="316" width="84" height="42" rx="2" fill="#e2ca9b" stroke="#a0794e" stroke-width="0.8" />
+      <polygon points="22,314 96,304 102,340 28,350" fill="#ba624a" stroke="#7c3828" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Mid-lower center (Lê Hồng Phong — Hoàng Văn Thụ, Phan Châu Trinh — Cô Giang) -->
+    <g>
+      <rect x="292" y="268" width="54" height="44" rx="2" fill="#e4cc9e" stroke="#a27c51" stroke-width="0.8" />
+      <rect x="354" y="270" width="44" height="42" rx="2" fill="#c77655" stroke="#85442d" stroke-width="0.8" />
+      <rect x="286" y="324" width="64" height="42" rx="2" fill="#d4b27c" stroke="#966e44" stroke-width="0.8" />
+      <rect x="360" y="328" width="46" height="40" rx="2" fill="#b45a44" stroke="#783526" stroke-width="0.8" />
+
+      <rect x="434" y="276" width="42" height="44" rx="2" fill="#d8b883" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="506" y="278" width="38" height="42" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+      <rect x="430" y="334" width="58" height="40" rx="2" fill="#c36b4e" stroke="#823e2a" stroke-width="0.8" />
+      <rect x="502" y="336" width="68" height="40" rx="2" fill="#e1c797" stroke="#9e764c" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Mid-lower right (Cô Giang — Yên Bái — Trần Phú — Bạch Đằng) -->
+    <g>
+      <rect x="632" y="286" width="56" height="42" rx="2" fill="#d8b883" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="622" y="340" width="52" height="42" rx="2" fill="#bd644a" stroke="#7d3828" stroke-width="0.8" />
+
+      <rect x="730" y="290" width="54" height="44" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+      <rect x="820" y="294" width="76" height="42" rx="2" fill="#c97958" stroke="#85452e" stroke-width="0.8" />
+      <line x1="820" y1="315" x2="896" y2="315" stroke="#efd2b6" stroke-width="0.8" opacity="0.55" />
+      <rect x="714" y="348" width="64" height="40" rx="2" fill="#d5b27c" stroke="#976f45" stroke-width="0.8" />
+      <rect x="816" y="348" width="74" height="44" rx="2" fill="#b45b45" stroke="#783526" stroke-width="0.8" />
+
+      <rect x="946" y="298" width="84" height="46" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+      <rect x="940" y="356" width="84" height="48" rx="2" fill="#c77454" stroke="#84422c" stroke-width="0.8" />
+    </g>
+
+    <!-- Block: Lower section (Hoàng Văn Thụ — Nguyễn Văn Linh) -->
+    <g>
+      <rect x="34" y="394" width="68" height="40" rx="2" fill="#e2ca9b" stroke="#9f784d" stroke-width="0.8" />
+      <rect x="116" y="398" width="86" height="42" rx="2" fill="#c67252" stroke="#83402b" stroke-width="0.8" />
+      <rect x="28" y="452" width="74" height="40" rx="2" fill="#d4b17b" stroke="#966e44" stroke-width="0.8" />
+      <rect x="114" y="456" width="82" height="44" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+      <rect x="44" y="518" width="88" height="46" rx="2" fill="#b85f47" stroke="#7a3627" stroke-width="0.8" />
+
+      <rect x="266" y="402" width="68" height="42" rx="2" fill="#d9b984" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="348" y="406" width="64" height="42" rx="2" fill="#c36b4e" stroke="#823e2a" stroke-width="0.8" />
+      <rect x="252" y="460" width="74" height="48" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+      <rect x="342" y="464" width="68" height="46" rx="2" fill="#d5b37c" stroke="#976f45" stroke-width="0.8" />
+      <rect x="242" y="524" width="84" height="42" rx="2" fill="#c97958" stroke="#85452e" stroke-width="0.8" />
+
+      <rect x="434" y="410" width="76" height="38" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+      <rect x="524" y="414" width="68" height="38" rx="2" fill="#b45a44" stroke="#783526" stroke-width="0.8" />
+      <rect x="446" y="476" width="82" height="34" rx="2" fill="#d8b883" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="442" y="530" width="96" height="36" rx="2" fill="#e2ca9b" stroke="#9f784d" stroke-width="0.8" />
+
+      <rect x="650" y="422" width="74" height="38" rx="2" fill="#c77555" stroke="#85442d" stroke-width="0.8" />
+      <rect x="742" y="426" width="118" height="36" rx="2" fill="#e4cc9f" stroke="#a27c51" stroke-width="0.8" />
+      <rect x="646" y="484" width="84" height="44" rx="2" fill="#d5b27c" stroke="#976f45" stroke-width="0.8" />
+      <rect x="746" y="486" width="106" height="44" rx="2" fill="#bd644a" stroke="#7c3828" stroke-width="0.8" />
+
+      <rect x="932" y="426" width="86" height="46" rx="2" fill="#d8b883" stroke="#9a7247" stroke-width="0.8" />
+      <rect x="928" y="486" width="86" height="44" rx="2" fill="#e3cb9d" stroke="#a0794e" stroke-width="0.8" />
+    </g>
+  </g>
+
+  <!-- Subtle courtyard greenery clusters -->
+  <g fill="#8c9d75" opacity="0.65">
+    <circle cx="486" cy="204" r="6" />
+    <circle cx="495" cy="208" r="4.5" />
+    <circle cx="808" cy="316" r="7" />
+    <circle cx="800" cy="324" r="5" />
+    <circle cx="332" cy="492" r="6" />
+    <circle cx="606" cy="322" r="5.5" />
+    <circle cx="908" cy="144" r="5.5" />
+    <circle cx="1010" cy="410" r="6" />
+    <circle cx="1060" cy="340" r="5" />
+    <circle cx="1064" cy="350" r="4" />
+    <circle cx="1058" cy="212" r="5" />
+    <circle cx="206" cy="382" r="5.5" />
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- HAN RIVER (SÔNG HÀN) ON THE FAR RIGHT                               -->
+  <!-- =================================================================== -->
+  <path
+    d="M 1185 0 C 1138 72, 1098 134, 1088 188 C 1076 260, 1078 360, 1072 475 C 1068 535, 1066 575, 1066 620 L 1200 620 L 1200 0 Z"
+    fill="url(#riverGrad)"
+  />
+  <path
+    d="M 1185 0 C 1138 72, 1098 134, 1088 188 C 1076 260, 1078 360, 1072 475 C 1068 535, 1066 575, 1066 620"
+    fill="none"
+    stroke="#8e7758"
+    stroke-width="2"
+    opacity="0.72"
+  />
+  <g stroke="#7f9188" stroke-width="1.2" fill="none" opacity="0.45" stroke-linecap="round">
+    <path d="M 1118 225 q 12 -4 24 0 t 24 0" />
+    <path d="M 1106 320 q 12 -4 24 0 t 24 0" />
+    <path d="M 1115 425 q 12 -4 24 0 t 24 0" />
+    <path d="M 1104 510 q 12 -4 24 0 t 24 0" />
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- ROAD NETWORK (FOLLOWING THE EXACT BLUE ROUTES IN REFERENCE MAP)     -->
+  <!-- =================================================================== -->
+
+  <!-- Road Casing (warm sepia-gold outline) -->
+  <g fill="none" stroke="#b99361" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Trần Quốc Toản (top) -->
+    <polyline points="0,62 298,12 355,6 1125,42" stroke-width="14" />
+    <!-- Thái Phiên -->
+    <line x1="188" y1="120" x2="1066" y2="166" stroke-width="14" />
+    <!-- Lê Hồng Phong (hero street) -->
+    <line x1="42" y1="236" x2="1055" y2="286" stroke-width="16" />
+    <!-- Hoàng Văn Thụ -->
+    <line x1="0" y1="362" x2="904" y2="412" stroke-width="14" />
+    <!-- Nguyễn Văn Linh + Cầu Rồng (bottom divided avenue) -->
+    <line x1="0" y1="590" x2="1200" y2="574" stroke-width="20" />
+
+    <!-- Hoàng Diệu (left diagonal) -->
+    <polyline points="318,0 188,120 42,236 0,274" stroke-width="14" />
+    <!-- Phan Châu Trinh (left-center vertical) -->
+    <polyline points="318,0 294,126 274,248 254,376 205,588" stroke-width="14" />
+    <!-- Nguyễn Chí Thanh (mid-left vertical) -->
+    <polyline points="440,0 428,134 405,254" stroke-width="13" />
+    <!-- Cô Giang (down from Lê Hồng Phong near pin) -->
+    <polyline points="622,264 580,394 648,400 612,482 572,584" stroke-width="13" />
+    <!-- Yên Bái (vertical right of pin) -->
+    <polyline points="750,0 728,148 718,270 676,398" stroke-width="14" />
+    <!-- Trần Phú (major vertical right) -->
+    <polyline points="976,0 950,160 925,280 904,412 888,520 882,580" stroke-width="15" />
+    <!-- Trần Phú Y-branches into Nguyễn Văn Linh -->
+    <line x1="888" y1="520" x2="722" y2="582" stroke-width="13" />
+    <line x1="888" y1="520" x2="1034" y2="576" stroke-width="13" />
+    <!-- Bạch Đằng (riverfront) -->
+    <polyline points="1162,0 1088,124 1066,166 1055,286 1046,460 1034,576 1030,620" stroke-width="16" />
+
+    <!-- Secondary Blue Spurs & Alleys (Kiệt) -->
+    <g stroke-width="9">
+      <!-- Top-left diagonal spurs -->
+      <line x1="0" y1="146" x2="112" y2="190" />
+      <line x1="176" y1="244" x2="16" y2="362" />
+      <line x1="0" y1="480" x2="116" y2="504" />
+      <line x1="224" y1="514" x2="484" y2="572" />
+      <!-- Upper block alleys -->
+      <line x1="590" y1="0" x2="582" y2="140" />
+      <line x1="846" y1="26" x2="836" y2="106" />
+      <line x1="836" y1="154" x2="828" y2="214" />
+      <polyline points="512,138 502,210 412,206" />
+      <!-- Spurs below Lê Hồng Phong -->
+      <line x1="416" y1="255" x2="408" y2="322" />
+      <line x1="490" y1="258" x2="482" y2="318" />
+      <line x1="556" y1="262" x2="544" y2="322" />
+      <!-- Alleys near Hoàng Văn Thụ & Cô Giang -->
+      <line x1="798" y1="328" x2="788" y2="404" />
+      <line x1="734" y1="460" x2="896" y2="472" />
+      <line x1="516" y1="458" x2="620" y2="468" />
+      <line x1="454" y1="506" x2="594" y2="520" />
+      <line x1="366" y1="382" x2="352" y2="460" />
+      <line x1="392" y1="464" x2="378" y2="544" />
+    </g>
+  </g>
+
+  <!-- Road Fill (warm ivory-cream) -->
+  <g fill="none" stroke="#fff9ec" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="0,62 298,12 355,6 1125,42" stroke-width="11" />
+    <line x1="188" y1="120" x2="1066" y2="166" stroke-width="11" />
+    <line x1="42" y1="236" x2="1055" y2="286" stroke-width="13" />
+    <line x1="0" y1="362" x2="904" y2="412" stroke-width="11" />
+    <line x1="0" y1="590" x2="1200" y2="574" stroke-width="16" />
+
+    <polyline points="318,0 188,120 42,236 0,274" stroke-width="11" />
+    <polyline points="318,0 294,126 274,248 254,376 205,588" stroke-width="11" />
+    <polyline points="440,0 428,134 405,254" stroke-width="10" />
+    <polyline points="622,264 580,394 648,400 612,482 572,584" stroke-width="10" />
+    <polyline points="750,0 728,148 718,270 676,398" stroke-width="11" />
+    <polyline points="976,0 950,160 925,280 904,412 888,520 882,580" stroke-width="12" />
+    <line x1="888" y1="520" x2="722" y2="582" stroke-width="10" />
+    <line x1="888" y1="520" x2="1034" y2="576" stroke-width="10" />
+    <polyline points="1162,0 1088,124 1066,166 1055,286 1046,460 1034,576 1030,620" stroke-width="13" />
+
+    <!-- Secondary Alleys Fill -->
+    <g stroke-width="6.5">
+      <line x1="0" y1="146" x2="112" y2="190" />
+      <line x1="176" y1="244" x2="16" y2="362" />
+      <line x1="0" y1="480" x2="116" y2="504" />
+      <line x1="224" y1="514" x2="484" y2="572" />
+      <line x1="590" y1="0" x2="582" y2="140" />
+      <line x1="846" y1="26" x2="836" y2="106" />
+      <line x1="836" y1="154" x2="828" y2="214" />
+      <polyline points="512,138 502,210 412,206" />
+      <line x1="416" y1="255" x2="408" y2="322" />
+      <line x1="490" y1="258" x2="482" y2="318" />
+      <line x1="556" y1="262" x2="544" y2="322" />
+      <line x1="798" y1="328" x2="788" y2="404" />
+      <line x1="734" y1="460" x2="896" y2="472" />
+      <line x1="516" y1="458" x2="620" y2="468" />
+      <line x1="454" y1="506" x2="594" y2="520" />
+      <line x1="366" y1="382" x2="352" y2="460" />
+      <line x1="392" y1="464" x2="378" y2="544" />
+    </g>
+  </g>
+
+  <!-- Subtle lacquer-red dashed highlight along Lê Hồng Phong -->
+  <line x1="42" y1="236" x2="1055" y2="286" stroke="#841723" stroke-width="1.6" stroke-dasharray="9 7" opacity="0.52" />
+
+  <!-- Nguyễn Văn Linh central median line + Dragon Bridge arches -->
+  <line x1="0" y1="590" x2="1068" y2="576" stroke="#c8a265" stroke-width="1.4" opacity="0.7" />
+  <path
+    d="M 1068 576 Q 1094 552 1120 575 T 1174 574 T 1200 570"
+    fill="none"
+    stroke="#c79440"
+    stroke-width="2.8"
+    stroke-linecap="round"
+  />
+
+  <!-- =================================================================== -->
+  <!-- STREET LABELS (EXACTLY MATCHING THE REFERENCE MAP)                  -->
+  <!-- =================================================================== -->
+  <g font-family="'Playfair Display', Georgia, serif" font-weight="700" fill="#523124" letter-spacing="0.8">
+    <text x="415" y="21" font-size="12" transform="rotate(2 415 21)">Trần Quốc Toản</text>
+    <text x="195" y="102" font-size="12" transform="rotate(-42 195 102)">Hoàng Diệu</text>
+    <text x="330" y="136" font-size="12" transform="rotate(2.8 330 136)">Thái Phiên</text>
+    <text x="86" y="242" font-size="13" fill="#7c1622" transform="rotate(2.8 86 242)">Lê Hồng Phong</text>
+    <text x="530" y="395" font-size="12" transform="rotate(3 530 395)">Hoàng Văn Thụ</text>
+    <text x="48" y="594" font-size="12.5" transform="rotate(-0.8 48 594)">Nguyễn Văn Linh</text>
+    <text x="742" y="584" font-size="12.5" transform="rotate(-0.8 742 584)">Nguyễn Văn Linh</text>
+    <text x="1086" y="562" font-size="12" fill="#7c1622">Cầu Rồng</text>
+
+    <!-- Vertical street labels -->
+    <text x="723" y="226" font-size="11.5" transform="rotate(-86 723 226)">Yên Bái</text>
+    <text x="928" y="274" font-size="11.5" transform="rotate(-84 928 274)">Trần Phú</text>
+    <text x="1062" y="304" font-size="11.5" transform="rotate(-88 1062 304)">Bạch Đằng</text>
+    <text x="1110" y="114" font-size="11.5" transform="rotate(-64 1110 114)">Bạch Đằng</text>
+    <text x="612" y="484" font-size="11.5" transform="rotate(-74 612 484)">Cô Giang</text>
+
+    <!-- Han River label -->
+    <text x="1142" y="294" font-size="15" font-style="italic" font-weight="400" fill="#51665e" letter-spacing="2" text-anchor="middle">Sông Hàn</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- GÔM LOCATION PIN AT 25 LÊ HỒNG PHONG (EXACT RED PIN POSITION)       -->
+  <!-- =================================================================== -->
+  <g transform="translate(595, 260)">
+    <!-- Soft pulsing halo rings -->
+    <circle cx="0" cy="0" r="38" fill="#841723" opacity="0.1" />
+    <circle cx="0" cy="0" r="22" fill="#841723" opacity="0.18" />
+    <circle cx="0" cy="0" r="6" fill="#7c1622" stroke="#f7ecd6" stroke-width="2" />
+
+    <!-- Heritage Teardrop Pin -->
+    <g filter="url(#pinShadow)" transform="translate(0, -5)">
+      <path
+        d="M 0 0 C -17 -23, -24 -36, -24 -51 A 24 24 0 1 1 24 -51 C 24 -36, 17 -23, 0 0 Z"
+        fill="#7c1622"
+        stroke="#d8b572"
+        stroke-width="2.4"
+      />
+      <circle cx="0" cy="-51" r="15" fill="#f6ead3" stroke="#d8b572" stroke-width="1.4" />
+      <text
+        x="0"
+        y="-46.5"
+        text-anchor="middle"
+        font-family="'Playfair Display', Georgia, serif"
+        font-size="10.8"
+        font-weight="700"
+        fill="#68121a"
+        letter-spacing="0.4"
+      >
+        GÔM
+      </text>
+    </g>
+
+    <!-- Elegant Callout Plaque -->
+    <g filter="url(#cardShadow)" transform="translate(34, -84)">
+      <rect x="0" y="0" width="214" height="60" rx="8" fill="#68121a" stroke="#d8b572" stroke-width="1.5" />
+      <rect x="4" y="4" width="206" height="52" rx="5" fill="none" stroke="#d8b572" stroke-width="0.6" opacity="0.55" />
+      <text x="15" y="26" font-family="'Playfair Display', Georgia, serif" font-size="16" font-weight="700" fill="#f7ecd6" letter-spacing="1.2">
+        GÔM
+      </text>
+      <text x="68" y="25" font-family="'Playfair Display', Georgia, serif" font-size="9.5" fill="#d8b572" letter-spacing="1.3">
+        · ẨM THỰC MIỀN TRUNG
+      </text>
+      <text x="15" y="45" font-family="'Be Vietnam Pro', system-ui, -apple-system, sans-serif" font-size="11.5" fill="#f2e4ca" opacity="0.94">
+        25 Lê Hồng Phong, Hải Châu
+      </text>
+    </g>
+  </g>
+
+  <!-- Antique Gold Compass Rose (bottom-left above Nguyễn Văn Linh) -->
+  <g transform="translate(1148, 506)" stroke="#7c5631" fill="none" opacity="0.82">
+    <circle cx="0" cy="0" r="22" fill="#f7ecd6" fill-opacity="0.72" stroke-width="1" />
+    <circle cx="0" cy="0" r="17" stroke-width="0.55" stroke-dasharray="2 2.5" />
+    <polygon points="0,-18 4,-4 0,-7 -4,-4" fill="#7c1622" stroke="none" />
+    <polygon points="0,18 4,4 0,7 -4,4" fill="#b48a4e" stroke="none" />
+    <polygon points="18,0 4,4 7,0 4,-4" fill="#b48a4e" stroke="none" />
+    <polygon points="-18,0 -4,4 -7,0 -4,-4" fill="#b48a4e" stroke="none" />
+    <text x="0" y="-25" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="9.5" font-weight="700" fill="#7c1622" stroke="none">
+      B
+    </text>
+  </g>
+
+  <!-- Outer Editorial Double Border -->
+  <rect x="10" y="10" width="1180" height="600" rx="4" fill="none" stroke="#9e7444" stroke-width="1.4" opacity="0.65" />
+  <rect x="16" y="16" width="1168" height="588" rx="2" fill="none" stroke="#9e7444" stroke-width="0.7" opacity="0.45" />
+</svg>

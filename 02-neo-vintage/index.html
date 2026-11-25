@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GÔM — Nhà hàng ẩm thực miền Trung · Phong cách Hoài Cổ</title>
+  <meta name="description" content="GÔM — Gôm về bên nhau. Quây tròn bữa ăn vui. Ẩm thực miền Trung tại 25 Lê Hồng Phong, Hải Châu, Đà Nẵng.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Bỏ qua đến nội dung chính</a>
+
+  <!-- Header: Vintage Shophouse Signboard + Ribbon -->
+  <header class="signboard-header" id="dau-trang">
+    <div class="signboard-top">
+      <div class="container signboard-meta">
+        <span>25 LÊ HỒNG PHONG · HẢI CHÂU · ĐÀ NẴNG</span>
+        <span class="meta-dot" aria-hidden="true">◆</span>
+        <span>MỞ CỬA MỖI NGÀY: 8AM – 10PM</span>
+        <span class="meta-dot" aria-hidden="true">◆</span>
+        <span>HOTLINE: SẮP CẬP NHẬT</span>
+      </div>
+    </div>
+
+    <div class="signboard-main">
+      <div class="container signboard-inner">
+        <a class="brand-plaque" href="#dau-trang" aria-label="GÔM Trang chủ">
+          <img src="../assets/wordmark-header.webp" alt="GÔM" class="brand-wordmark" width="128" height="44">
+          <span class="brand-sub">BẾP MIỀN TRUNG · ĐÀ NẴNG</span>
+        </a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="mainNav"
+          aria-label="Mở trình đơn điều hướng"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+          <ul class="nav-list">
+            <li><a href="#thuc-don">Thực đơn</a></li>
+            <li><a href="#chuyen-gom">Chuyện GÔM</a></li>
+            <li><a href="#choi-cung-gom">Chơi cùng GÔM</a></li>
+            <li><a href="#ghe-gom">Ghé GÔM</a></li>
+          </ul>
+          <a href="#dat-ban" class="btn-ticket-nav">Đặt bàn</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="ribbon-wrap" aria-hidden="true">
+      <div class="vintage-ribbon">
+        <span>ĐẬM TRONG HƯƠNG VỊ</span>
+        <span class="ribbon-sep">✦</span>
+        <span>TƯƠI TRONG NGUYÊN LIỆU</span>
+        <span class="ribbon-sep">✦</span>
+        <span>VUI TRONG TRẢI NGHIỆM</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="noi-dung">
+    <!-- Hero Broadsheet -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="broadsheet-frame">
+          <div class="corner-ornament corner-tl" aria-hidden="true"></div>
+          <div class="corner-ornament corner-tr" aria-hidden="true"></div>
+          <div class="corner-ornament corner-bl" aria-hidden="true"></div>
+          <div class="corner-ornament corner-br" aria-hidden="true"></div>
+
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="chapter-kicker">
+                <span class="kicker-line"></span>
+                <span>TẬP KÝ SỰ BẾP NHÀ · SỐ 25 LÊ HỒNG PHONG</span>
+                <span class="kicker-line"></span>
+              </div>
+
+              <h1 class="hero-title">Gôm về bên nhau.<br><em>Quây tròn bữa ăn vui.</em></h1>
+
+              <p class="hero-lead">
+                Giữa lòng Đà Nẵng, GÔM giữ lại nếp nhà miền Trung thuở cũ: mâm cơm đậm đà hương biển và đất Quảng, tiếng gọi nhau rôm rả đầu ngõ, và niềm vui khi món ngon đặt giữa bàn cho cả nhà cùng gắp.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#thuc-don" class="btn-primary">Xem bảng thực đơn</a>
+                <a href="#choi-cung-gom" class="btn-secondary">Bốc mâm — Ăn chi hè?</a>
+              </div>
+
+              <dl class="hero-pillars">
+                <div class="pillar-item">
+                  <dt>ĐẬM</dt>
+                  <dd>Trong hương vị mắm nêm, nghệ tươi, tiêu rừng</dd>
+                </div>
+                <div class="pillar-item">
+                  <dt>TƯƠI</dt>
+                  <dd>Trong nguyên liệu ghe sớm &amp; rau vườn quê</dd>
+                </div>
+                <div class="pillar-item">
+                  <dt>VUI</dt>
+                  <dd>Trong trải nghiệm quây quần, chuyện nối chuyện</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="hero-visual">
+              <figure class="postage-frame hero-photo-frame">
+                <img
+                  src="../assets/photos/gathering.webp"
+                  alt="Mâm cơm miền Trung quây quần tại GÔM"
+                  width="640"
+                  height="480"
+                >
+                <figcaption class="photo-caption">
+                  Mâm cơm quây quần — Món ngon đặt giữa bàn, câu chuyện nối câu chuyện
+                </figcaption>
+              </figure>
+
+              <div class="rooster-stamp-card" aria-label="Tem tranh Đông Hồ Gà Đại Cát">
+                <img
+                  src="../assets/rooster-card.webp"
+                  alt="Tranh dân gian Đông Hồ con gà"
+                  width="112"
+                  height="112"
+                >
+                <div class="rooster-stamp-text">
+                  <span class="stamp-overline">ẤN PHẨM NHÀ GÔM</span>
+                  <strong>Mời cả nhà vô mâm hè!</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ornamental Divider -->
+    <div class="chapter-divider" aria-hidden="true">
+      <span class="divider-rule"></span>
+      <span class="divider-motif">❖</span>
+      <span class="divider-rule"></span>
+    </div>
+
+    <!-- Chapter 1: Chuyện GÔM -->
+    <section class="chapter-section" id="chuyen-gom">
+      <div class="container">
+        <header class="chapter-header">
+          <p class="chapter-num">CHƯƠNG I</p>
+          <h2 class="chapter-title">Tiếng gọi &ldquo;gôm&rdquo;</h2>
+          <p class="chapter-subtitle">Một tiếng gọi thân thương từ nếp nhà miền Trung</p>
+        </header>
+
+        <div class="memoir-layout">
+          <div class="memoir-text-col">
+            <div class="memoir-card">
+              <p class="dropcap-para">
+                Người miền Trung thương nhau không nói nhiều lời hoa mỹ, chỉ cần một tiếng <strong>&ldquo;gôm&rdquo;</strong> mộc mạc là đủ hiểu: gôm nhau lại cho đông vui, có khách ghé nhà thì so thêm đôi đũa, có miếng ngon thì gắp cho nhau miếng đầu tiên.
+              </p>
+              <p>
+                Từ tiếng gọi thân thương ấy, GÔM dựng nên một gian nhà ấm cúng mang hồn phố cổ miền Trung — nơi tường vôi vàng, gạch bông cũ, ánh đèn lồng dịu và mùi nước lèo thơm lừng níu bước chân người đi xa lẫn bạn bè gần kề.
+              </p>
+              <blockquote class="heritage-quote">
+                &ldquo;Món ngon đặt giữa bàn, câu chuyện nối câu chuyện. Hôm nay đi mấy người, ăn mâm chi hè?&rdquo;
+              </blockquote>
+
+              <div class="memoir-stamps">
+                <div class="wax-seal-badge">
+                  <img src="../assets/gom-mark-small.webp" alt="Dấu tròn GÔM" width="52" height="52">
+                  <div>
+                    <strong>44 món miền Trung</strong>
+                    <span>Đủ 7 nhóm từ gỏi, nướng đến canh lẩu</span>
+                  </div>
+                </div>
+                <div class="wax-seal-badge">
+                  <img src="../assets/chili-card.webp" alt="Minh họa ớt miền Trung" width="52" height="52">
+                  <div>
+                    <strong>Đậm đà bản địa</strong>
+                    <span>Giữ trọn vị Quảng Nam – Huế – Đà Nẵng</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="memoir-gallery-col">
+            <figure class="postage-frame memoir-photo-lg">
+              <img
+                src="../assets/photos/garden.webp"
+                alt="Lối đi xanh mát trong không gian nhà cổ GÔM"
+                loading="lazy"
+                width="560"
+                height="380"
+              >
+              <figcaption class="photo-caption">Khoảng sân xanh mát trước hiên nhà cũ</figcaption>
+            </figure>
+
+            <div class="memoir-photo-pair">
+              <figure class="postage-frame">
+                <img
+                  src="../assets/photos/coffee-together.webp"
+                  alt="Cùng nhau thưởng thức cà phê và trò chuyện tại GÔM"
+                  loading="lazy"
+                  width="270"
+                  height="210"
+                >
+                <figcaption class="photo-caption">Cà phê sáng rôm rả</figcaption>
+              </figure>
+              <figure class="postage-frame">
+                <img
+                  src="../assets/photos/drinks.webp"
+                  alt="Thức uống thảo mộc và rượu hồng đào tại GÔM"
+                  loading="lazy"
+                  width="270"
+                  height="210"
+                >
+                <figcaption class="photo-caption">Trà sâm dứa &amp; Hồng Đào</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="chapter-divider" aria-hidden="true">
+      <span class="divider-rule"></span>
+      <span class="divider-motif">❖</span>
+      <span class="divider-rule"></span>
+    </div>
+
+    <!-- Chapter 2: Old Printed Menu Board -->
+    <section class="chapter-section menu-chapter" id="thuc-don">
+      <div class="container">
+        <header class="chapter-header">
+          <p class="chapter-num">CHƯƠNG II</p>
+          <h2 class="chapter-title">Bảng thực đơn nhà cũ</h2>
+          <p class="chapter-subtitle">44 món ngon chia làm 7 nhóm — ăn chi hè, cứ chọn thả ga!</p>
+        </header>
+
+        <div class="menu-board">
+          <div class="menu-board-inner">
+            <div class="menu-board-top">
+              <div class="menu-board-seal">
+                <img src="../assets/gom-mark-small.webp" alt="" width="44" height="44" aria-hidden="true">
+                <div>
+                  <span class="board-label">BẢNG MÓN CHÍNH THỨC</span>
+                  <h3 class="board-heading">Thực Đơn GÔM · 44 Món Miền Trung</h3>
+                </div>
+              </div>
+              <p class="board-count" id="menuCount" aria-live="polite">Đang xem: Món địa phương (13 món)</p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="menu-tabs" role="tablist" aria-label="Nhóm món thực đơn" id="menuTabs">
+              <!-- Populated by app.js -->
+            </div>
+
+            <!-- Menu Ledger List -->
+            <div class="menu-ledger" id="menuLedger" role="tabpanel" aria-live="polite">
+              <!-- Populated by app.js -->
+            </div>
+
+            <div class="menu-board-footer">
+              <span>✦ Nguyên liệu tươi mỗi sáng · Có thể điều chỉnh độ cay theo khẩu vị cả nhà ✦</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="chapter-divider" aria-hidden="true">
+      <span class="divider-rule"></span>
+      <span class="divider-motif">❖</span>
+      <span class="divider-rule"></span>
+    </div>
+
+    <!-- Chapter 3: Phiếu bốc mâm & Giọng Quảng Nam -->
+    <section class="chapter-section play-chapter" id="choi-cung-gom">
+      <div class="container">
+        <header class="chapter-header">
+          <p class="chapter-num">CHƯƠNG III</p>
+          <h2 class="chapter-title">Phiếu bốc mâm &amp; Chuyện giọng Quảng</h2>
+          <p class="chapter-subtitle">Hôm nay đi mấy người, ăn mâm chi hè? Bốc một phiếu cho vui bàn!</p>
+        </header>
+
+        <div class="play-grid">
+          <!-- Ticket: Phiếu bốc mâm -->
+          <div class="raffle-ticket" aria-labelledby="raffleHeading">
+            <div class="ticket-header">
+              <div class="ticket-brand">
+                <span class="ticket-kicker">PHIẾU BỐC THĂM MÂM ĂN</span>
+                <h3 id="raffleHeading">Hôm nay ăn mâm chi hè?</h3>
+              </div>
+              <div class="ticket-serial">
+                <span>SỐ PHIẾU</span>
+                <strong id="ticketSerial">GOM-001</strong>
+              </div>
+            </div>
+
+            <div class="ticket-controls">
+              <div class="guest-picker">
+                <label for="guestRange" class="picker-label">
+                  Bàn mình đi mấy người? <strong id="guestCountDisplay">4 người</strong>
+                </label>
+                <div class="guest-stepper">
+                  <button type="button" class="step-btn" id="guestMinus" aria-label="Giảm số người">−</button>
+                  <input type="range" id="guestRange" min="1" max="20" value="4" aria-label="Chọn số người từ 1 đến 20">
+                  <button type="button" class="step-btn" id="guestPlus" aria-label="Tăng số người">+</button>
+                </div>
+                <p class="picker-hint" id="guestHint">Mâm 4 người gợi ý 5 món đủ khai vị, món chính &amp; canh.</p>
+              </div>
+
+              <button type="button" class="btn-stamp" id="drawTrayBtn">
+                <span class="btn-stamp-inner">Bốc mâm ngay</span>
+              </button>
+            </div>
+
+            <div class="ticket-perforation" aria-hidden="true">
+              <span class="perf-notch perf-left"></span>
+              <span class="perf-dashes"></span>
+              <span class="perf-notch perf-right"></span>
+            </div>
+
+            <div class="ticket-result" id="trayResult" aria-live="polite">
+              <div class="tray-empty-state">
+                <img src="../assets/rooster-card.webp" alt="" width="76" height="76" aria-hidden="true">
+                <p>Nhấn <strong>&ldquo;Bốc mâm ngay&rdquo;</strong> để rút 4–6 món ngẫu nhiên từ bếp nhà GÔM!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Card: Dino nói từ giọng Quảng Nam -->
+          <aside class="dialect-card" aria-labelledby="dialectHeading">
+            <div class="dialect-stamp-top">SỔ TAY TIẾNG QUẢNG</div>
+            <div class="dialect-mascot">
+              <img src="../assets/dino-card.webp" alt="Chú khủng long Dino nói giọng Quảng Nam" width="128" height="128">
+            </div>
+            <h3 id="dialectHeading" class="dialect-title">Dino nói giọng Quảng Nam</h3>
+            <p class="dialect-intro">Học vài tiếng miền Trung thân thương trước khi vô mâm cho thêm rôm rả hè!</p>
+
+            <div class="dialect-word-box" id="dialectBox" aria-live="polite">
+              <span class="dialect-tag" id="dialectTag">TỪ #01 / 06</span>
+              <p class="dialect-word" id="dialectWord">&ldquo;Hè&rdquo;</p>
+              <p class="dialect-meaning" id="dialectMeaning"><strong>Nghĩa:</strong> Nhỉ, nhé — tiếng đệm đầy thân tình cuối câu của người miền Trung.</p>
+              <p class="dialect-example" id="dialectExample"><em>Ví dụ: &ldquo;Gôm đủ người, mình gặp nhau hè!&rdquo;</em></p>
+            </div>
+
+            <button type="button" class="btn-secondary dialect-btn" id="nextDialectBtn">
+              Lật sang từ tiếp theo →
+            </button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="chapter-divider" aria-hidden="true">
+      <span class="divider-rule"></span>
+      <span class="divider-motif">❖</span>
+      <span class="divider-rule"></span>
+    </div>
+
+    <!-- Chapter 4: Postcard Visit + Ticket Booking -->
+    <section class="chapter-section visit-chapter" id="ghe-gom">
+      <div class="container">
+        <header class="chapter-header">
+          <p class="chapter-num">CHƯƠNG IV</p>
+          <h2 class="chapter-title">Bưu thiếp từ 25 Lê Hồng Phong</h2>
+          <p class="chapter-subtitle">Gôm đủ người, mình gặp nhau hè!</p>
+        </header>
+
+        <!-- Postcard -->
+        <div class="postcard">
+          <div class="postcard-left">
+            <div class="postcard-map-frame">
+              <img
+                src="../assets/gom-map-danang.svg"
+                alt="Bản đồ minh họa vị trí nhà hàng GÔM tại 25 Lê Hồng Phong, Hải Châu, Đà Nẵng"
+                loading="lazy"
+                width="540"
+                height="400"
+              >
+            </div>
+            <p class="map-caption">Bản đồ phố Hải Châu — Gần cầu Rồng &amp; trung tâm Đà Nẵng</p>
+          </div>
+
+          <div class="postcard-spine" aria-hidden="true"></div>
+
+          <div class="postcard-right">
+            <div class="postcard-header-row">
+              <div class="postcard-title-block">
+                <span class="postcard-kicker">BƯU THIẾP · ĐÀ NẴNG</span>
+                <h3>Ghé nhà GÔM</h3>
+              </div>
+
+              <div class="postage-stamp-group">
+                <div class="postmark-circle" aria-hidden="true">
+                  <span>ĐÀ NẴNG</span>
+                  <strong>8AM–10PM</strong>
+                  <span>HẢI CHÂU</span>
+                </div>
+                <div class="mini-stamp">
+                  <img src="../assets/chili-card.webp" alt="Tem bưu chính GÔM" width="58" height="58">
+                </div>
+              </div>
+            </div>
+
+            <dl class="postcard-lines">
+              <div class="postcard-line">
+                <dt>Địa chỉ</dt>
+                <dd>25 Lê Hồng Phong, Hải Châu, Đà Nẵng</dd>
+              </div>
+              <div class="postcard-line">
+                <dt>Giờ mở cửa</dt>
+                <dd>8:00 – 22:00 (Thứ 2 đến Chủ Nhật)</dd>
+              </div>
+              <div class="postcard-line">
+                <dt>Hotline</dt>
+                <dd>Sắp cập nhật</dd>
+              </div>
+              <div class="postcard-line">
+                <dt>Nhắn gửi</dt>
+                <dd>Đi đông hay đi ít cứ ghé, bếp luôn đỏ lửa chờ cả nhà!</dd>
+              </div>
+            </dl>
+
+            <div class="postcard-note">
+              <p>&ldquo;Có khách thì thêm đôi đũa, có món ngon thì gắp cho nhau miếng đầu tiên.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ticket Booking Form -->
+        <div class="booking-ticket" id="dat-ban">
+          <div class="booking-ticket-stub">
+            <span class="stub-label">PHIẾU GIỮ BÀN</span>
+            <h3>Đặt bàn trước</h3>
+            <p>Điền phiếu nhỏ bên cạnh để nhà GÔM sắp sẵn bàn ấm cúng và giữ chỗ đẹp cho cả nhà.</p>
+            <ul class="stub-notes">
+              <li>Nhận đặt bàn từ 1 đến 20 khách</li>
+              <li>Khung giờ phục vụ: 8AM – 10PM</li>
+              <li>Hỗ trợ ghế trẻ em &amp; mâm gia đình</li>
+            </ul>
+            <div class="stub-emblem">
+              <img src="../assets/gom-mark-small.webp" alt="" width="56" height="56" aria-hidden="true">
+              <span>GÔM · 25 LÊ HỒNG PHONG</span>
+            </div>
+          </div>
+
+          <div class="booking-ticket-body">
+            <form id="bookingForm" class="booking-form" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="guestName">Tên người đặt *</label>
+                  <input type="text" id="guestName" name="guestName" placeholder="Ví dụ: Anh Minh / Chị Lan" required>
+                </div>
+                <div class="form-field">
+                  <label for="guestPhone">Số điện thoại *</label>
+                  <input type="tel" id="guestPhone" name="guestPhone" placeholder="Ví dụ: 0905 123 456" required>
+                </div>
+              </div>
+
+              <div class="form-row form-row-3">
+                <div class="form-field">
+                  <label for="visitDate">Ngày ghé *</label>
+                  <input type="date" id="visitDate" name="visitDate" required>
+                </div>
+                <div class="form-field">
+                  <label for="visitTime">Giờ ăn *</label>
+                  <select id="visitTime" name="visitTime" required>
+                    <option value="">Chọn giờ</option>
+                    <option value="08:30">08:30 (Sáng)</option>
+                    <option value="11:30">11:30 (Trưa)</option>
+                    <option value="12:30">12:30 (Trưa)</option>
+                    <option value="17:30">17:30 (Chiều tối)</option>
+                    <option value="18:30" selected>18:30 (Tối)</option>
+                    <option value="19:30">19:30 (Tối)</option>
+                    <option value="20:30">20:30 (Tối)</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="partySize">Số khách *</label>
+                  <input type="number" id="partySize" name="partySize" min="1" max="20" value="4" required>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="guestNote">Nhắn bếp thêm chi hè? (tùy chọn)</label>
+                <input type="text" id="guestNote" name="guestNote" placeholder="Ví dụ: Có trẻ nhỏ, ít cay, ngồi gần cửa sổ...">
+              </div>
+
+              <p class="form-error" id="formError" role="alert" aria-live="polite"></p>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-primary">Đóng dấu giữ bàn</button>
+                <span class="form-disclaimer">Xác nhận ngay trên phiếu (bản thử nghiệm tĩnh)</span>
+              </div>
+            </form>
+
+            <div class="booking-confirmation" id="bookingConfirmation" hidden aria-live="polite">
+              <div class="confirm-stamp">ĐÃ ĐÓNG DẤU GIỮ BÀN</div>
+              <h4>Cảm ơn <span id="confirmName"></span> — GÔM chờ cả nhà hè!</h4>
+              <p class="confirm-code">Mã phiếu giữ bàn: <strong id="confirmCode"></strong></p>
+              <dl class="confirm-summary" id="confirmSummary"></dl>
+              <button type="button" class="btn-secondary" id="newBookingBtn">Tạo phiếu giữ bàn khác</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Vintage Footer -->
+  <footer class="heritage-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/wordmark-header.webp" alt="GÔM" width="136" height="48">
+        <p class="footer-slogan">Gôm về bên nhau. Quây tròn bữa ăn vui.</p>
+        <p class="footer-values">ĐẬM trong hương vị · TƯƠI trong nguyên liệu · VUI trong trải nghiệm</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ghé GÔM</h4>
+        <p>25 Lê Hồng Phong, Hải Châu, Đà Nẵng</p>
+        <p>Mở cửa: 8AM – 10PM mỗi ngày</p>
+        <p>Hotline: Sắp cập nhật</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Mục lục ký sự</h4>
+        <ul>
+          <li><a href="#chuyen-gom">Chương I: Tiếng gọi &ldquo;gôm&rdquo;</a></li>
+          <li><a href="#thuc-don">Chương II: Bảng thực đơn nhà cũ</a></li>
+          <li><a href="#choi-cung-gom">Chương III: Phiếu bốc mâm</a></li>
+          <li><a href="#ghe-gom">Chương IV: Bưu thiếp &amp; Đặt bàn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>GÔM · Bản thử phong cách 02 — Hoài Cổ Miền Trung (Heritage / Neo-Vintage)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed back link to styles index -->
+  <a href="../index.html" class="back-to-styles" aria-label="Quay lại danh sách các phong cách">
+    ← Các phong cách
+  </a>
+
+  <script src="./app.js"></script>
+</body>
+</html>

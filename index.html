@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GÔM — 8 phong cách thiết kế website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --red:#851923; --deep:#68121a; --gold:#d4b273; --cream:#f6efe2; --ink:#2c1512; --muted:#5e433b; --line:rgba(104,18,26,.18); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--cream); color:var(--ink); font-family:"Be Vietnam Pro",sans-serif; font-size:16px; line-height:1.6; }
+    header { background:var(--deep); color:var(--cream); padding:56px 6vw 48px; }
+    header img { height:48px; margin-bottom:24px; }
+    h1 { font-family:"Playfair Display",serif; font-size:clamp(32px,4vw,48px); line-height:1.15; margin:0 0 12px; }
+    header p { margin:0; max-width:640px; color:rgba(246,239,226,.88); }
+    main { padding:48px 6vw 72px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:20px; }
+    .card { display:flex; flex-direction:column; background:#fffdf8; border:1px solid var(--line); border-radius:16px; overflow:hidden; color:inherit; text-decoration:none; transition:transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform:translateY(-4px); box-shadow:0 16px 36px rgba(44,21,18,.12); }
+    .swatch { height:120px; display:flex; align-items:flex-end; padding:16px 20px; font-family:"Playfair Display",serif; font-size:44px; font-weight:700; }
+    .body { padding:18px 20px 22px; display:flex; flex-direction:column; gap:8px; flex:1; }
+    .body h2 { margin:0; font-size:19px; }
+    .body small { font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--red); }
+    .body p { margin:0; font-size:14px; color:var(--muted); }
+    .ref { margin-top:auto; padding-top:10px; font-size:13px; color:var(--muted); border-top:1px dashed var(--line); }
+    .s1 { background:#ede3cf; color:#621018; } .s2 { background:#c9a46a; color:#3d1a10; background-image:repeating-linear-gradient(45deg,rgba(0,0,0,.04) 0 2px,transparent 2px 6px); }
+    .s3 { background:#f3f1ec; color:#1f1f1f; } .s4 { background:linear-gradient(135deg,#851923,#d4b273); color:#fff; }
+    .s5 { background:#f6efe2; color:#851923; background-image:linear-gradient(#fff 0 0),linear-gradient(#fff 0 0); background-size:46% 44%,46% 44%; background-position:6% 14%,94% 86%; background-repeat:no-repeat; }
+    .s6 { background:#120708; color:#d4b273; } .s7 { background:#ffd23f; color:#111; border-bottom:3px solid #111; } .s8 { background:#851923; color:#fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./assets/wordmark-header.webp" alt="GÔM" />
+    <h1>8 phong cách website cho GÔM</h1>
+    <p>Mỗi bản là một trang chủ thử nghiệm dùng chung nội dung, hình ảnh và giọng điệu GÔM — chỉ khác cách bố cục, điều hướng và tương tác để bạn đặt cạnh nhau so sánh.</p>
+  </header>
+  <main>
+    <div class="grid">
+      <a class="card" href="./01-editorial/"><div class="swatch s1">01</div><div class="body"><small>Editorial / Magazine</small><h2>Tạp chí &amp; Biên tập</h2><p>Lưới kẻ chỉ 1px, chữ có chân, chia mảng màu, menu toàn màn hình, sổ tay lật trang.</p><span class="ref">Tham khảo: Pizza 4P's</span></div></a>
+      <a class="card" href="./02-neo-vintage/"><div class="swatch s2">02</div><div class="body"><small>Heritage / Neo-Vintage</small><h2>Hoài niệm &amp; Bản địa</h2><p>Giấy kraft, tem phiếu, tranh Đông Hồ, thực đơn kiểu bảng in xưa, bưu thiếp chỉ đường.</p><span class="ref">Tham khảo: Dishoom, Cộng Cà Phê</span></div></a>
+      <a class="card" href="./03-minimal-wabi-sabi/"><div class="swatch s3">03</div><div class="body"><small>Minimalist / Wabi-Sabi</small><h2>Tối giản Á Đông</h2><p>Khoảng trắng rộng, ít chữ, món ăn đứng một mình làm chủ thể, chuyển động rất nhẹ.</p><span class="ref">Tham khảo: % Arabica, BAO London</span></div></a>
+      <a class="card" href="./04-interactive-gamified/"><div class="swatch s4">04</div><div class="body"><small>Interactive / Gamified</small><h2>Tương tác &amp; Trò chơi</h2><p>Bàn xoay bốc mâm ngay ở Hero, thẻ lật, đoán món, con trỏ tùy biến, đặt bàn từng bước.</p><span class="ref">Tham khảo: Tripletta Pizza, The Fat Duck</span></div></a>
+      <a class="card" href="./05-bento-grid/"><div class="swatch s5">05</div><div class="body"><small>Bento Grid</small><h2>Lưới Bento hiện đại</h2><p>Ô lớn nhỏ đan xen: video, trạng thái mở cửa, món signature, bốc mâm mini, bản đồ.</p><span class="ref">Tham khảo: Godly, Apple-style bento</span></div></a>
+      <a class="card" href="./06-cinematic/"><div class="swatch s6">06</div><div class="body"><small>Cinematic / Full-bleed</small><h2>Điện ảnh tràn viền</h2><p>Nền tối, video toàn màn hình, từng "cảnh" 100vh, món ăn dưới ánh đèn sân khấu.</p><span class="ref">Tham khảo: Noma, Anan Saigon</span></div></a>
+      <a class="card" href="./07-playful-brutalism/"><div class="swatch s7">07</div><div class="body"><small>Playful / Neo-Brutalism</small><h2>Phá cách năng lượng cao</h2><p>Chữ cực lớn, viền đen dày, sticker xoay nghiêng, máy bốc mâm kiểu slot-machine.</p><span class="ref">Tham khảo: Big Mamma Group</span></div></a>
+      <a class="card" href="./08-app-like/"><div class="swatch s8">08</div><div class="body"><small>Conversion-First / App-like</small><h2>Trải nghiệm kiểu ứng dụng</h2><p>Thanh dock nổi đáy màn hình, các màn hình dạng tab, tìm món, khay món, đặt bàn 1 chạm.</p><span class="ref">Tham khảo: App F&amp;B, Navbar Gallery</span></div></a>
+    </div>
+  </main>
+</body>
+</html>

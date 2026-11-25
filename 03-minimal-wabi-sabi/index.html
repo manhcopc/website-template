@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GÔM — Gôm về bên nhau</title>
+  <meta name="description" content="GÔM — ẩm thực miền Trung tại 25 Lê Hồng Phong, Hải Châu, Đà Nẵng. Gôm về bên nhau. Quây tròn bữa ăn vui.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Noto+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua đến nội dung</a>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="GÔM — về đầu trang">
+      <span class="brand-dot" aria-hidden="true"></span>GÔM
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#thuc-don">Thực đơn</a>
+      <a href="#chuyen-gom">Chuyện GÔM</a>
+      <a href="#choi-cung-gom">Chơi cùng GÔM</a>
+      <a href="#ghe-gom">Ghé GÔM</a>
+      <a class="nav-book" href="#dat-ban">Đặt bàn</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow fade">Ẩm thực miền Trung · Đà Nẵng</p>
+      <figure class="hero-dish fade">
+        <img src="../assets/dishes/mi-quang-phu-chiem.webp" alt="Tô mì Quảng Phú Chiêm" width="640" height="640" fetchpriority="high">
+      </figure>
+      <h1 id="hero-title" class="hero-title fade">Gôm về bên nhau.<br>Quây tròn bữa ăn vui.</h1>
+      <p class="caption fade">Mì Quảng Phú Chiêm — một tô, một tiếng gọi thân thương.</p>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section class="story" id="chuyen-gom" aria-labelledby="story-title">
+      <div class="wrap narrow">
+        <p class="label fade">Chuyện GÔM</p>
+        <h2 id="story-title" class="h2 fade">Một tiếng gọi thân thương</h2>
+        <p class="lead fade">Người miền Trung gọi nhau bằng tiếng “gôm” mộc mạc. Có khách thì thêm đôi đũa, có món ngon thì gắp cho nhau miếng đầu tiên.</p>
+        <p class="body fade">Món ngon đặt giữa bàn, câu chuyện nối câu chuyện. GÔM giữ lại điều giản dị đó — không bày vẽ, chỉ có mâm cơm và người ngồi quanh.</p>
+        <ul class="pillars fade" aria-label="Tinh thần GÔM">
+          <li><span>Đậm</span>trong hương vị</li>
+          <li><span>Tươi</span>trong nguyên liệu</li>
+          <li><span>Vui</span>trong trải nghiệm</li>
+        </ul>
+      </div>
+      <figure class="story-photo fade">
+        <img src="../assets/photos/gathering.webp" alt="Mâm cơm quây quần bên nhau" loading="lazy">
+        <figcaption class="caption">Mâm cơm, và những người ngồi quanh.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Món tiêu biểu -->
+    <section class="signature" aria-labelledby="sig-title">
+      <div class="wrap">
+        <p class="label fade">Món tiêu biểu</p>
+        <h2 id="sig-title" class="h2 fade">Ăn chi hè?</h2>
+      </div>
+      <div class="sig-list">
+        <figure class="sig fade">
+          <img src="../assets/dishes/banh-xeo-truyen-thong.webp" alt="Bánh xèo truyền thống" loading="lazy">
+          <figcaption class="caption">Bánh xèo truyền thống — giòn rụm, cuốn rau sống.</figcaption>
+        </figure>
+        <figure class="sig sig-right fade">
+          <img src="../assets/dishes/cao-lau-hoi-an.webp" alt="Cao lầu Hội An" loading="lazy">
+          <figcaption class="caption">Cao lầu Hội An — sợi dai, nước nhóng đậm.</figcaption>
+        </figure>
+        <figure class="sig fade">
+          <img src="../assets/dishes/lau-hai-san-cu-lao-cham.webp" alt="Lẩu hải sản Cù Lao Chàm" loading="lazy">
+          <figcaption class="caption">Lẩu hải sản Cù Lao Chàm — nồi to cho cả bàn.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Thực đơn -->
+    <section class="menu" id="thuc-don" aria-labelledby="menu-title">
+      <div class="wrap">
+        <p class="label fade">Thực đơn · 44 món</p>
+        <h2 id="menu-title" class="h2 fade">Thực đơn</h2>
+        <div class="menu-tabs fade" role="tablist" aria-label="Nhóm món"></div>
+        <div class="menu-body">
+          <ol class="menu-list" id="menu-list" aria-live="polite"></ol>
+          <figure class="menu-preview" aria-hidden="true">
+            <img id="menu-preview-img" src="../assets/dishes/banh-xeo-hau-pho-mai.webp" alt="">
+            <figcaption class="caption" id="menu-preview-cap">Rê chuột lên tên món để xem.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bốc mâm -->
+    <section class="play" id="choi-cung-gom" aria-labelledby="play-title">
+      <div class="wrap narrow center">
+        <p class="label fade">Chơi cùng GÔM · Bốc mâm</p>
+        <h2 id="play-title" class="h2 fade">Hôm nay đi mấy người, ăn mâm chi hè?</h2>
+        <div class="picker fade">
+          <div class="stepper" role="group" aria-label="Số người">
+            <button type="button" class="step" id="minus" aria-label="Bớt một người">–</button>
+            <output id="people" aria-live="polite"><span id="people-n">4</span> người</output>
+            <button type="button" class="step" id="plus" aria-label="Thêm một người">+</button>
+          </div>
+          <button type="button" class="text-btn" id="pick">Bốc mâm</button>
+        </div>
+      </div>
+      <div class="wrap">
+        <p class="tray-note caption" id="tray-note" aria-live="polite"></p>
+        <ul class="tray" id="tray" aria-label="Mâm gợi ý"></ul>
+      </div>
+      <div class="wrap narrow center">
+        <p class="aside fade">Còn có mini-game <em>Dino nói giọng Quảng Nam</em> — đợi hè, sắp ra mắt.</p>
+      </div>
+    </section>
+
+    <!-- Ghé GÔM -->
+    <section class="visit" id="ghe-gom" aria-labelledby="visit-title">
+      <div class="wrap visit-grid">
+        <div class="visit-info">
+          <p class="label fade">Ghé GÔM</p>
+          <h2 id="visit-title" class="h2 fade">Gôm đủ người, mình gặp nhau hè!</h2>
+          <dl class="facts fade">
+            <div><dt>Địa chỉ</dt><dd>25 Lê Hồng Phong, Hải Châu, Đà Nẵng</dd></div>
+            <div><dt>Giờ mở cửa</dt><dd>8AM – 10PM, mỗi ngày</dd></div>
+            <div><dt>Hotline</dt><dd>Sắp cập nhật</dd></div>
+          </dl>
+          <a class="text-link fade" href="https://maps.google.com/?q=25+L%C3%AA+H%E1%BB%93ng+Phong,+H%E1%BA%A3i+Ch%C3%A2u,+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener">Chỉ đường →</a>
+        </div>
+        <figure class="map fade">
+          <img src="../assets/gom-map-danang.svg" alt="Bản đồ minh họa vị trí GÔM tại Hải Châu, Đà Nẵng" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Đặt bàn -->
+    <section class="book" id="dat-ban" aria-labelledby="book-title">
+      <div class="wrap narrow">
+        <p class="label fade">Đặt bàn</p>
+        <h2 id="book-title" class="h2 fade">Giữ một chỗ quanh mâm</h2>
+        <form class="form fade" id="book-form" novalidate>
+          <div class="field">
+            <label for="f-name">Tên của bạn</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Số điện thoại</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +]{9,15}">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-date">Ngày</label>
+              <input id="f-date" name="date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="f-time">Giờ</label>
+              <input id="f-time" name="time" type="time" min="08:00" max="21:30" value="18:30" required>
+            </div>
+            <div class="field">
+              <label for="f-guests">Số người</label>
+              <input id="f-guests" name="guests" type="number" min="1" max="20" value="4" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-note">Ghi chú <span class="muted">(không bắt buộc)</span></label>
+            <input id="f-note" name="note" type="text">
+          </div>
+          <p class="form-error" id="form-error" role="alert"></p>
+          <button type="submit" class="text-btn">Gửi yêu cầu</button>
+        </form>
+        <div class="confirm" id="confirm" hidden tabindex="-1">
+          <p class="h3">Cảm ơn nghen.</p>
+          <p class="body" id="confirm-text"></p>
+          <button type="button" class="text-link" id="book-again">Đặt thêm bàn khác</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p><span class="brand-dot" aria-hidden="true"></span>GÔM · Gôm về bên nhau.</p>
+      <p class="muted">25 Lê Hồng Phong, Hải Châu, Đà Nẵng · 8AM – 10PM</p>
+      <p class="muted">© 2026 GÔM</p>
+    </div>
+  </footer>
+
+  <a class="back-link" href="../index.html">← Các phong cách</a>
+
+  <script src="app.js"></script>
+</body>
+</html>
